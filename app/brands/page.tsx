@@ -26,7 +26,7 @@ export default async function BrandsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {brands.map((brand) => (
+          {brands.map((brand: { id: string; name: string; country: string | null; description: string | null; _count: { fragrances: number } }) => (
             <Link
               key={brand.id}
               href={`/fragrances?brand=${encodeURIComponent(brand.name)}`}
