@@ -1,635 +1,78 @@
-[00:00:00.595] Server  LOG     
-[00:00:00.595] Server  LOG       We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
-[00:00:00.595] Server  LOG       The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
-
-[00:00:00.595] Server  LOG       	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
-[00:00:00.595] Server  LOG       	- include was updated to add '.next/dev/types/**/*.ts'
-[00:00:00.595] Server  LOG     
-[00:00:00.595] Server  LOG       The following mandatory changes were made to your tsconfig.json:
-
-[00:00:00.595] Server  LOG       	- jsx was set to react-jsx (next.js uses the React automatic runtime)
-[00:00:00.595] Server  LOG     
-[00:00:00.690] Server  LOG     ✓ Ready in 485ms
-[00:00:26.354] Server  ERROR   ⨯ ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-
-
-[00:00:27.356] Browser ERROR   uncaughtError: Error: ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-
-
-[00:00:27.623] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:00:27.623] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:00:27.623] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:00:41.207] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:00:52.837] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:07.605] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:22.524] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:33.154] Server  ERROR   ⨯ ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-
-
-[00:01:33.166] Server  ERROR   ⨯ ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-
-
-[00:01:33.201] Server  LOG     ✓ Compiled in 24ms
-[00:01:33.412] Browser ERROR   uncaughtError: Error: ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-
-
-[00:01:33.569] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:33.569] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:52.109] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:52.295] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:01:52.295] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
-    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
-    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
-    [at <anonymous>]
-    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
-    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:02:03.030] Browser ERROR   ./app/globals.css
-Error evaluating Node.js code
-CssSyntaxError: tailwindcss: C:\Coding\scentelica\app\globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
-    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
-    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
-    [at Object.Once (C:\Coding\scentelica\node_modules\@tailwindcss\postcss\dist\index.js:10:6911)]
-    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
-    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
-    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
-    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
-
-Import trace:
-  Client Component Browser:
-    ./app/globals.css [Client Component Browser]
-    ./app/layout.tsx [Server Component]
-[00:02:44.555] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:02:44.605] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:02:44.878] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:45.000] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:17.230] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:17.234] Server  LOG     ✓ Compiled in 21ms
-[00:03:17.239] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:03:17.239] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:03:17.263] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:17.281] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:17.292] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__36b083e1._.css
-[00:03:17.299] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:03:17.324] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:17.345] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:03:17.362] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:17.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:17.766] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:32.415] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:32.443] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:03:32.469] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:03:32.507] Server  LOG     ✓ Compiled in 19ms
-[00:03:32.727] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:32.840] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:03.608] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:04:03.609] Server  LOG     ✓ Compiled in 25ms
-[00:04:03.615] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:03.645] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:03.689] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:03.689] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:03.706] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:03.723] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:03.746] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:03.774] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:03.792] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:03.808] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:04.089] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:05.017] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:16.482] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:04:16.482] Server  LOG     ✓ Compiled in 23ms
-[00:04:16.502] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:16.503] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:16.528] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:16.545] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:16.568] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:16.594] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:16.609] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:16.626] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:16.882] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:17.013] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:34.151] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:34.171] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:34.193] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:34.210] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:34.223] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:04:34.240] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:04:34.550] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:35.016] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:05:17.860] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:05:17.884] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
-
-  259 ;
-  260 ;
-  261 async function HomePage() {
-→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:05:31.835] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:05:31.864] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:05:32.288] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:33.010] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:05:46.172] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:05:46.205] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:05:46.450] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:46.558] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:07:25.017] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:07:25.046] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:07:25.293] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:25.399] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:07:58.889] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:07:58.912] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:07:59.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:59.303] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:08:00.818] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
-[00:08:00.841] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
-Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
-[00:08:01.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:01.275] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
-Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
-C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
-
-  279 ;
-  280 ;
-  281 async function HomePage() {
-→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
-Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:00:00.692] Server  LOG     ✓ Ready in 491ms
+[00:00:01.135] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE 1=1 ORDER BY \"public\".\"fragrances\".\"ratingAvg\" DESC LIMIT $1 OFFSET $2"
+[00:00:01.137] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
+[00:00:01.433] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.543] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-darkreader-mode="dynamic"
+-                         data-darkreader-scheme="dark"
+-                         data-darkreader-proxy-injected="true"
+                        >
+                          ...
+                            <div className="grid grid-...">
+                              <div className="space-y-4">
+                                <div className="w-16 h-16 ...">
+                                  <svg
+                                    className="w-8 h-8 text-primary"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+-                                   data-darkreader-inline-stroke=""
+-                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                  >
+                                ...
+                              <div className="space-y-4">
+                                <div className="w-16 h-16 ...">
+                                  <svg
+                                    className="w-8 h-8 text-primary"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+-                                   data-darkreader-inline-stroke=""
+-                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                  >
+                                ...
+                              <div className="space-y-4">
+                                <div className="w-16 h-16 ...">
+                                  <svg
+                                    className="w-8 h-8 text-primary"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+-                                   data-darkreader-inline-stroke=""
+-                                   style={{--darkreader-inline-stroke:"currentColor"}}
+                                  >
+                                ...
+                  ...
+
+[00:01:04.562] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE 1=1 ORDER BY \"public\".\"fragrances\".\"ratingAvg\" DESC LIMIT $1 OFFSET $2"
+[00:01:04.564] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
