@@ -294,3 +294,342 @@ C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326.
   261 async function HomePage() {
 → 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
 Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:17.230] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:17.234] Server  LOG     ✓ Compiled in 21ms
+[00:03:17.239] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:03:17.239] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:03:17.263] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:17.281] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:17.292] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__36b083e1._.css
+[00:03:17.299] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:03:17.324] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:17.345] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:03:17.362] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:17.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:17.766] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:32.415] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:32.443] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:03:32.469] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:03:32.507] Server  LOG     ✓ Compiled in 19ms
+[00:03:32.727] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:32.840] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:03.608] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:03.609] Server  LOG     ✓ Compiled in 25ms
+[00:04:03.615] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:03.645] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:03.689] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:03.689] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:03.706] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:03.723] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:03.746] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:03.774] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:03.792] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:03.808] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:04.089] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:05.017] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:16.482] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:16.482] Server  LOG     ✓ Compiled in 23ms
+[00:04:16.502] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:16.503] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:16.528] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:16.545] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:16.568] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:16.594] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:16.609] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:16.626] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:16.882] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:17.013] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:34.151] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:34.171] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:34.193] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:34.210] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:34.223] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:04:34.240] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:04:34.550] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:35.016] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:05:17.860] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:05:17.884] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:05:31.835] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:05:31.864] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:05:32.288] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:33.010] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:05:46.172] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:05:46.205] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:05:46.450] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:46.558] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:07:25.017] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:07:25.046] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:07:25.293] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:25.399] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:07:58.889] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:07:58.912] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:07:59.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:59.303] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:08:00.818] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:282:156\n\n  279 ;\n  280 ;\n  281 async function HomePage() {\n→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:08:00.841] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:08:01.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:01.275] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:282:156
+
+  279 ;
+  280 ;
+  281 async function HomePage() {
+→ 282     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.

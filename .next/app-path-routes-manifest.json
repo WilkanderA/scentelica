@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/brands/page": "/brands",
+  "/fragrances/[id]/page": "/fragrances/[id]",
+  "/fragrances/page": "/fragrances",
+  "/notes/page": "/notes",
+  "/page": "/"
+}

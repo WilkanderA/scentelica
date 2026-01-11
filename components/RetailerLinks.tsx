@@ -7,8 +7,8 @@ interface Retailer {
 interface RetailerLink {
   id: string;
   productUrl: string;
-  price?: number;
-  currency?: string;
+  price?: number | null;
+  currency?: string | null;
   retailer: Retailer;
 }
 
