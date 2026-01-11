@@ -1,0 +1,140 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Brands (Chanel, Dior, etc.)
+model Brand {
+  id          String      @id @default(cuid())
+  name        String      @unique
+  description String?
+  logoUrl     String?
+  country     String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  fragrances  Fragrance[]
+
+  @@map("brands")
+}
+
+// Main fragrances table
+model Fragrance {
+  id             String              @id @default(cuid())
+  name           String
+  brandId        String
+  brand          Brand               @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  year           Int?
+  gender         String? // Men, Women, Unisex
+  concentration  String? // EDP, EDT, Parfum, Cologne, etc.
+  description    String?
+  bottleImageUrl String?
+  ratingAvg      Float?              @default(0)
+  reviewCount    Int                 @default(0)
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  notes          FragranceNote[]
+  retailers      FragranceRetailer[]
+  comments       Comment[]
+
+  @@index([brandId])
+  @@index([gender])
+  @@map("fragrances")
+}
+
+// Fragrance notes library (Bergamot, Vanilla, Rose, etc.)
+model Note {
+  id          String          @id @default(cuid())
+  name        String          @unique
+  category    String // top, heart, base
+  description String?
+  imageUrl    String?
+  createdAt   DateTime        @default(now())
+  fragrances  FragranceNote[]
+
+  @@index([category])
+  @@map("notes")
+}
+
+// Junction table for fragrance-note relationships
+model FragranceNote {
+  id          String    @id @default(cuid())
+  fragranceId String
+  fragrance   Fragrance @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
+  noteId      String
+  note        Note      @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  category    String // top, heart, base
+  intensity   Int? // 1-5 scale for note prominence
+
+  @@unique([fragranceId, noteId, category])
+  @@index([fragranceId])
+  @@index([noteId])
+  @@map("fragrance_notes")
+}
+
+// Retailers (Sephora, Nordstrom, FragranceNet, etc.)
+model Retailer {
+  id         String              @id @default(cuid())
+  name       String              @unique
+  websiteUrl String
+  logoUrl    String?
+  createdAt  DateTime            @default(now())
+  fragrances FragranceRetailer[]
+
+  @@map("retailers")
+}
+
+// Where to buy fragrances
+model FragranceRetailer {
+  id          String    @id @default(cuid())
+  fragranceId String
+  fragrance   Fragrance @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
+  retailerId  String
+  retailer    Retailer  @relation(fields: [retailerId], references: [id], onDelete: Cascade)
+  productUrl  String
+  price       Float?
+  currency    String? // USD, EUR, GBP, etc.
+  lastChecked DateTime  @default(now())
+
+  @@unique([fragranceId, retailerId])
+  @@index([fragranceId])
+  @@index([retailerId])
+  @@map("fragrance_retailers")
+}
+
+// Users for authentication and comments
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String?
+  avatarUrl String?
+  role      String    @default("user") // user, admin
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  comments  Comment[]
+
+  @@map("users")
+}
+
+// User comments and reviews
+model Comment {
+  id           String    @id @default(cuid())
+  fragranceId  String
+  fragrance    Fragrance @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content      String
+  rating       Int? // 1-5 stars
+  helpfulCount Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([fragranceId])
+  @@index([userId])
+  @@map("comments")
+}

@@ -1,0 +1,296 @@
+[00:00:00.595] Server  LOG     
+[00:00:00.595] Server  LOG       We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:00.595] Server  LOG       The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:00.595] Server  LOG       	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+[00:00:00.595] Server  LOG       	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:00.595] Server  LOG     
+[00:00:00.595] Server  LOG       The following mandatory changes were made to your tsconfig.json:
+
+[00:00:00.595] Server  LOG       	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:00.595] Server  LOG     
+[00:00:00.690] Server  LOG     ✓ Ready in 485ms
+[00:00:26.354] Server  ERROR   ⨯ ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:27.356] Browser ERROR   uncaughtError: Error: ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:27.623] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:27.623] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:27.623] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:41.207] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:52.837] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:07.605] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:22.524] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:33.154] Server  ERROR   ⨯ ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:01:33.166] Server  ERROR   ⨯ ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:01:33.201] Server  LOG     ✓ Compiled in 24ms
+[00:01:33.412] Browser ERROR   uncaughtError: Error: ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:01:33.569] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:33.569] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:52.109] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:52.295] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:52.295] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (C:\Coding\scentelica\node_modules\tailwindcss\dist\lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:03.030] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Coding\scentelica\app\globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (C:\Coding\scentelica\node_modules\@tailwindcss\postcss\dist\index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:103:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:44.555] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:262:156\n\n  259 ;\n  260 ;\n  261 async function HomePage() {\n→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\nUsing an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0."
+[00:02:44.605] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
+[00:02:44.878] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:45.000] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:262:156
+
+  259 ;
+  260 ;
+  261 async function HomePage() {
+→ 262     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+Using an HTTP connection string is not supported with Prisma Client version 7.2.0 by this version of `prisma dev`. Please either use a direct TCP connection string or upgrade your client to version 7.1.0.
