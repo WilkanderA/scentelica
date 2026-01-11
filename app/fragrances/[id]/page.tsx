@@ -85,7 +85,7 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
     notFound();
   }
 
-  const notes = fragrance.notes.map((fn) => ({
+  const notes = fragrance.notes.map((fn: { noteId: string; note: { name: string }; category: string; intensity: number | null }) => ({
     id: fn.noteId,
     name: fn.note.name,
     category: fn.category,
@@ -113,7 +113,7 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
       },
     }),
     ...(fragrance.retailers.length > 0 && {
-      offers: fragrance.retailers.map(fr => ({
+      offers: fragrance.retailers.map((fr: { productUrl: string; currency: string | null; price: number | null; retailer: { name: string } }) => ({
         "@type": "Offer",
         url: fr.productUrl,
         priceCurrency: fr.currency || "USD",

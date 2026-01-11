@@ -57,7 +57,7 @@ export default async function NotesPage() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {topNotes.map(note => <NoteCard key={note.id} note={note} />)}
+                {topNotes.map((note: typeof notes[0]) => <NoteCard key={note.id} note={note} />)}
               </div>
             </section>
           )}
@@ -76,7 +76,7 @@ export default async function NotesPage() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {heartNotes.map(note => <NoteCard key={note.id} note={note} />)}
+                {heartNotes.map((note: typeof notes[0]) => <NoteCard key={note.id} note={note} />)}
               </div>
             </section>
           )}
@@ -95,7 +95,7 @@ export default async function NotesPage() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {baseNotes.map(note => <NoteCard key={note.id} note={note} />)}
+                {baseNotes.map((note: typeof notes[0]) => <NoteCard key={note.id} note={note} />)}
               </div>
             </section>
           )}

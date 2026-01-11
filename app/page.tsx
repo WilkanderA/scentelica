@@ -57,7 +57,7 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {fragrances.map((fragrance) => (
+            {fragrances.map((fragrance: { id: string; name: string; brand: { name: string }; gender: string | null; concentration: string | null; ratingAvg: number | null; reviewCount: number; bottleImageUrl: string | null }) => (
               <FragranceCard
                 key={fragrance.id}
                 id={fragrance.id}
