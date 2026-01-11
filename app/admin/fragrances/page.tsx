@@ -41,7 +41,7 @@ export default async function ManageFragrancesPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {fragrances.map((fragrance) => (
+            {fragrances.map((fragrance: { id: string; name: string; brand: { name: string }; year: number | null; gender: string | null; ratingAvg: number | null }) => (
               <tr key={fragrance.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4">
                   <Link
