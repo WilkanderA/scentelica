@@ -12,9 +12,9 @@ export default async function NotesPage() {
     orderBy: { name: 'asc' },
   });
 
-  const topNotes = notes.filter(n => n.category === 'top');
-  const heartNotes = notes.filter(n => n.category === 'heart');
-  const baseNotes = notes.filter(n => n.category === 'base');
+  const topNotes = notes.filter((n: typeof notes[0]) => n.category === 'top');
+  const heartNotes = notes.filter((n: typeof notes[0]) => n.category === 'heart');
+  const baseNotes = notes.filter((n: typeof notes[0]) => n.category === 'base');
 
   const NoteCard = ({ note }: { note: typeof notes[0] }) => (
     <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all group">
