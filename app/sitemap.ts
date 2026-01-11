@@ -4,13 +4,18 @@ import { prisma } from '@/lib/db';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-  // Get all fragrances
-  const fragrances = await prisma.fragrance.findMany({
-    select: {
-      id: true,
-      updatedAt: true,
-    },
-  });
+  // Get all fragrances - with fallback for build time
+  let fragrances = [];
+  try {
+    fragrances = await prisma.fragrance.findMany({
+      select: {
+        id: true,
+        updatedAt: true,
+      },
+    });
+  } catch (error) {
+    console.log('Database not available during build, sitemap will be generated at runtime');
+  }
 
   const fragranceUrls = fragrances.map((fragrance) => ({
     url: `${baseUrl}/fragrances/${fragrance.id}`,
