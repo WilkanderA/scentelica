@@ -1,7 +1,17 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import FragranceCard from "@/components/FragranceCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import { prisma } from "@/lib/db";
+
+export const metadata: Metadata = {
+  title: "Browse Fragrances",
+  description: "Explore our complete collection of fragrances. Filter by brand, gender, and notes to find your perfect scent.",
+  openGraph: {
+    title: "Browse Fragrances | Scentelica",
+    description: "Explore our complete collection of fragrances. Filter by brand, gender, and notes to find your perfect scent.",
+  },
+};
 
 interface FragrancesPageProps {
   searchParams: Promise<{

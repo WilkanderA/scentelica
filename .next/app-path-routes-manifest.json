@@ -11,5 +11,7 @@
   "/fragrances/[id]/page": "/fragrances/[id]",
   "/fragrances/page": "/fragrances",
   "/notes/page": "/notes",
-  "/page": "/"
+  "/page": "/",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
 }
