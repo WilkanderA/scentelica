@@ -45,7 +45,7 @@ export default async function EditFragrancePage({ params }: EditFragrancePagePro
     concentration: fragrance.concentration,
     description: fragrance.description,
     bottleImageUrl: fragrance.bottleImageUrl,
-    selectedNotes: fragrance.notes.map(fn => ({
+    selectedNotes: fragrance.notes.map((fn: { noteId: string; category: string; intensity: number | null }) => ({
       noteId: fn.noteId,
       category: fn.category,
       intensity: fn.intensity || undefined,
