@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
   // Get all fragrances - with fallback for build time
-  let fragrances = [];
+  let fragrances: Array<{ id: string; updatedAt: Date }> = [];
   try {
     fragrances = await prisma.fragrance.findMany({
       select: {

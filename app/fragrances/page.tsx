@@ -4,6 +4,8 @@ import FragranceCard from "@/components/FragranceCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import { prisma } from "@/lib/db";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Browse Fragrances",
   description: "Explore our complete collection of fragrances. Filter by brand, gender, and notes to find your perfect scent.",

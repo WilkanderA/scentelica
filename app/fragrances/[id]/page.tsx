@@ -6,6 +6,8 @@ import NotesVisualization from "@/components/NotesVisualization";
 import RetailerLinks from "@/components/RetailerLinks";
 import CommentSection from "@/components/CommentSection";
 
+export const dynamic = 'force-dynamic';
+
 interface FragrancePageProps {
   params: Promise<{
     id: string;
