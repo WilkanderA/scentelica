@@ -22,6 +22,22 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/admin/fragrances/[id]/edit",
+      "regex": "^/admin/fragrances/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/fragrances/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/api/admin/fragrances/[id]",
+      "regex": "^/api/admin/fragrances/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/fragrances/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/fragrances/[id]",
       "regex": "^/fragrances/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -54,6 +70,24 @@
       "regex": "^/admin(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/fragrances",
+      "regex": "^/admin/fragrances(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/fragrances(?:/)?$"
+    },
+    {
+      "page": "/admin/fragrances/new",
+      "regex": "^/admin/fragrances/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/fragrances/new(?:/)?$"
+    },
+    {
+      "page": "/api/admin/fragrances",
+      "regex": "^/api/admin/fragrances(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/fragrances(?:/)?$"
     },
     {
       "page": "/brands",

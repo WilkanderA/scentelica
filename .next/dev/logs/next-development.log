@@ -1,78 +1,64 @@
-[00:00:00.692] Server  LOG     ✓ Ready in 491ms
-[00:00:01.135] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE 1=1 ORDER BY \"public\".\"fragrances\".\"ratingAvg\" DESC LIMIT $1 OFFSET $2"
-[00:00:01.137] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
-[00:00:01.433] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:01.543] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.700] Server  LOG     ✓ Ready in 500ms
+[00:00:01.151] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:285:156\n\n  282 ;\n  283 const dynamic = 'force-dynamic';\n  284 async function HomePage() {\n→ 285     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\n"
+[00:00:01.185] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:285:156
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+  282 ;
+  283 const dynamic = 'force-dynamic';
+  284 async function HomePage() {
+→ 285     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+[00:00:01.477] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.592] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:285:156
 
-%s%s https://react.dev/link/hydration-mismatch 
+  282 ;
+  283 const dynamic = 'force-dynamic';
+  284 async function HomePage() {
+→ 285     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="en"
--                         data-darkreader-mode="dynamic"
--                         data-darkreader-scheme="dark"
--                         data-darkreader-proxy-injected="true"
-                        >
-                          ...
-                            <div className="grid grid-...">
-                              <div className="space-y-4">
-                                <div className="w-16 h-16 ...">
-                                  <svg
-                                    className="w-8 h-8 text-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
--                                   data-darkreader-inline-stroke=""
--                                   style={{--darkreader-inline-stroke:"currentColor"}}
-                                  >
-                                ...
-                              <div className="space-y-4">
-                                <div className="w-16 h-16 ...">
-                                  <svg
-                                    className="w-8 h-8 text-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
--                                   data-darkreader-inline-stroke=""
--                                   style={{--darkreader-inline-stroke:"currentColor"}}
-                                  >
-                                ...
-                              <div className="space-y-4">
-                                <div className="w-16 h-16 ...">
-                                  <svg
-                                    className="w-8 h-8 text-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
--                                   data-darkreader-inline-stroke=""
--                                   style={{--darkreader-inline-stroke:"currentColor"}}
-                                  >
-                                ...
-                  ...
+[00:02:19.875] Server  LOG     prisma:error "\nInvalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany()` invocation in\nC:\\Coding\\scentelica\\.next\\dev\\server\\chunks\\ssr\\[root-of-the-server]__fa07c326._.js:285:156\n\n  282 ;\n  283 const dynamic = 'force-dynamic';\n  284 async function HomePage() {\n→ 285     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__[\"prisma\"].fragrance.findMany(\n"
+[00:02:19.916] Server  ERROR   ⨯ PrismaClientKnownRequestError: 
+Invalid `{imported module ./lib/db.ts}["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:285:156
 
-[00:01:04.562] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE 1=1 ORDER BY \"public\".\"fragrances\".\"ratingAvg\" DESC LIMIT $1 OFFSET $2"
-[00:01:04.564] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
+  282 ;
+  283 const dynamic = 'force-dynamic';
+  284 async function HomePage() {
+→ 285     const fragrances = await {imported module ./lib/db.ts}["prisma"].fragrance.findMany(
+
+[00:02:20.170] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:20.276] Browser ERROR   uncaughtError: PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany()` invocation in
+C:\Coding\scentelica\.next\dev\server\chunks\ssr\[root-of-the-server]__fa07c326._.js:285:156
+
+  282 ;
+  283 const dynamic = 'force-dynamic';
+  284 async function HomePage() {
+→ 285     const fragrances = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].fragrance.findMany(
+
+[00:03:15.817] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE 1=1 ORDER BY \"public\".\"fragrances\".\"ratingAvg\" DESC LIMIT $1 OFFSET $2"
+[00:03:15.820] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
+[00:03:16.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:30.828] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE (\"public\".\"fragrances\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:30.831] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" = $1 OFFSET $2"
+[00:03:32.756] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE (\"public\".\"fragrances\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:32.760] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" = $1 OFFSET $2"
+[00:03:33.730] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE (\"public\".\"fragrances\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:33.733] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" = $1 OFFSET $2"
+[00:03:33.942] Server  LOG     prisma:query "SELECT \"public\".\"fragrances\".\"id\", \"public\".\"fragrances\".\"name\", \"public\".\"fragrances\".\"brandId\", \"public\".\"fragrances\".\"year\", \"public\".\"fragrances\".\"gender\", \"public\".\"fragrances\".\"concentration\", \"public\".\"fragrances\".\"description\", \"public\".\"fragrances\".\"bottleImageUrl\", \"public\".\"fragrances\".\"ratingAvg\", \"public\".\"fragrances\".\"reviewCount\", \"public\".\"fragrances\".\"createdAt\", \"public\".\"fragrances\".\"updatedAt\" FROM \"public\".\"fragrances\" WHERE (\"public\".\"fragrances\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:03:33.945] Server  LOG     prisma:query "SELECT \"public\".\"brands\".\"id\", \"public\".\"brands\".\"name\", \"public\".\"brands\".\"description\", \"public\".\"brands\".\"logoUrl\", \"public\".\"brands\".\"country\", \"public\".\"brands\".\"createdAt\", \"public\".\"brands\".\"updatedAt\" FROM \"public\".\"brands\" WHERE \"public\".\"brands\".\"id\" = $1 OFFSET $2"
+[00:03:33.947] Server  LOG     prisma:query "SELECT \"public\".\"fragrance_notes\".\"id\", \"public\".\"fragrance_notes\".\"fragranceId\", \"public\".\"fragrance_notes\".\"noteId\", \"public\".\"fragrance_notes\".\"category\", \"public\".\"fragrance_notes\".\"intensity\" FROM \"public\".\"fragrance_notes\" WHERE \"public\".\"fragrance_notes\".\"fragranceId\" = $1 ORDER BY \"public\".\"fragrance_notes\".\"category\" ASC OFFSET $2"
+[00:03:33.948] Server  LOG     prisma:query "SELECT \"public\".\"fragrance_retailers\".\"id\", \"public\".\"fragrance_retailers\".\"fragranceId\", \"public\".\"fragrance_retailers\".\"retailerId\", \"public\".\"fragrance_retailers\".\"productUrl\", \"public\".\"fragrance_retailers\".\"price\", \"public\".\"fragrance_retailers\".\"currency\", \"public\".\"fragrance_retailers\".\"lastChecked\" FROM \"public\".\"fragrance_retailers\" WHERE \"public\".\"fragrance_retailers\".\"fragranceId\" = $1 OFFSET $2"
+[00:03:33.950] Server  LOG     prisma:query "SELECT \"public\".\"comments\".\"id\", \"public\".\"comments\".\"fragranceId\", \"public\".\"comments\".\"userId\", \"public\".\"comments\".\"content\", \"public\".\"comments\".\"rating\", \"public\".\"comments\".\"helpfulCount\", \"public\".\"comments\".\"createdAt\", \"public\".\"comments\".\"updatedAt\" FROM \"public\".\"comments\" WHERE \"public\".\"comments\".\"fragranceId\" = $1 ORDER BY \"public\".\"comments\".\"createdAt\" DESC OFFSET $2"
+[00:03:33.951] Server  LOG     prisma:query "SELECT \"public\".\"notes\".\"id\", \"public\".\"notes\".\"name\", \"public\".\"notes\".\"category\", \"public\".\"notes\".\"description\", \"public\".\"notes\".\"imageUrl\", \"public\".\"notes\".\"createdAt\" FROM \"public\".\"notes\" WHERE \"public\".\"notes\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
+[00:03:33.952] Server  LOG     prisma:query "SELECT \"public\".\"retailers\".\"id\", \"public\".\"retailers\".\"name\", \"public\".\"retailers\".\"websiteUrl\", \"public\".\"retailers\".\"logoUrl\", \"public\".\"retailers\".\"createdAt\" FROM \"public\".\"retailers\" WHERE \"public\".\"retailers\".\"id\" IN (NULL) OFFSET $1"
+[00:03:33.952] Server  LOG     prisma:query "SELECT \"public\".\"users\".\"id\", \"public\".\"users\".\"email\", \"public\".\"users\".\"name\", \"public\".\"users\".\"avatarUrl\", \"public\".\"users\".\"role\", \"public\".\"users\".\"createdAt\", \"public\".\"users\".\"updatedAt\" FROM \"public\".\"users\" WHERE \"public\".\"users\".\"id\" IN ($1) OFFSET $2"
+[00:03:43.958] Server  LOG     prisma:query "SELECT \"public\".\"fragrance_notes\".\"id\", \"public\".\"fragrance_notes\".\"fragranceId\", \"public\".\"fragrance_notes\".\"noteId\", \"public\".\"fragrance_notes\".\"category\", \"public\".\"fragrance_notes\".\"intensity\" FROM \"public\".\"fragrance_notes\" WHERE \"public\".\"fragrance_notes\".\"fragranceId\" = $1 ORDER BY \"public\".\"fragrance_notes\".\"category\" ASC OFFSET $2"
+[00:03:43.960] Server  LOG     prisma:query "SELECT \"public\".\"notes\".\"id\", \"public\".\"notes\".\"name\", \"public\".\"notes\".\"category\", \"public\".\"notes\".\"description\", \"public\".\"notes\".\"imageUrl\", \"public\".\"notes\".\"createdAt\" FROM \"public\".\"notes\" WHERE \"public\".\"notes\".\"id\" IN ($1,$2,$3,$4,$5,$6) OFFSET $7"
+[00:03:53.971] Server  LOG     prisma:query "SELECT \"public\".\"fragrance_retailers\".\"id\", \"public\".\"fragrance_retailers\".\"fragranceId\", \"public\".\"fragrance_retailers\".\"retailerId\", \"public\".\"fragrance_retailers\".\"productUrl\", \"public\".\"fragrance_retailers\".\"price\", \"public\".\"fragrance_retailers\".\"currency\", \"public\".\"fragrance_retailers\".\"lastChecked\" FROM \"public\".\"fragrance_retailers\" WHERE \"public\".\"fragrance_retailers\".\"fragranceId\" = $1 OFFSET $2"
+[00:03:53.972] Server  LOG     prisma:query "SELECT \"public\".\"retailers\".\"id\", \"public\".\"retailers\".\"name\", \"public\".\"retailers\".\"websiteUrl\", \"public\".\"retailers\".\"logoUrl\", \"public\".\"retailers\".\"createdAt\" FROM \"public\".\"retailers\" WHERE \"public\".\"retailers\".\"id\" IN (NULL) OFFSET $1"
+[00:04:03.986] Server  LOG     prisma:query "SELECT \"public\".\"comments\".\"id\", \"public\".\"comments\".\"fragranceId\", \"public\".\"comments\".\"userId\", \"public\".\"comments\".\"content\", \"public\".\"comments\".\"rating\", \"public\".\"comments\".\"helpfulCount\", \"public\".\"comments\".\"createdAt\", \"public\".\"comments\".\"updatedAt\" FROM \"public\".\"comments\" WHERE \"public\".\"comments\".\"fragranceId\" = $1 ORDER BY \"public\".\"comments\".\"createdAt\" DESC OFFSET $2"
+[00:04:03.987] Server  LOG     prisma:query "SELECT \"public\".\"users\".\"id\", \"public\".\"users\".\"email\", \"public\".\"users\".\"name\", \"public\".\"users\".\"avatarUrl\", \"public\".\"users\".\"role\", \"public\".\"users\".\"createdAt\", \"public\".\"users\".\"updatedAt\" FROM \"public\".\"users\" WHERE \"public\".\"users\".\"id\" IN ($1) OFFSET $2"

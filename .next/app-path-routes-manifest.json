@@ -1,7 +1,12 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/admin/fragrances/[id]/edit/page": "/admin/fragrances/[id]/edit",
+  "/admin/fragrances/new/page": "/admin/fragrances/new",
+  "/admin/fragrances/page": "/admin/fragrances",
   "/admin/page": "/admin",
+  "/api/admin/fragrances/[id]/route": "/api/admin/fragrances/[id]",
+  "/api/admin/fragrances/route": "/api/admin/fragrances",
   "/brands/page": "/brands",
   "/fragrances/[id]/page": "/fragrances/[id]",
   "/fragrances/page": "/fragrances",

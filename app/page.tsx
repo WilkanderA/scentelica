@@ -3,6 +3,8 @@ import FragranceCard from "@/components/FragranceCard";
 import SearchBar from "@/components/SearchBar";
 import { prisma } from "@/lib/db";
 
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   const fragrances = await prisma.fragrance.findMany({
     include: {

@@ -22,17 +22,20 @@ export default function AdminPage() {
             <p className="text-gray-600">Add a new fragrance to the database</p>
           </Link>
 
-          <div className="bg-white border-2 border-gray-200 rounded-xl p-8">
+          <Link
+            href="/admin/fragrances"
+            className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-primary hover:shadow-lg transition-all group"
+          >
             <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h2 className="text-xl font-bold text-gray-900">Manage Content</h2>
+              <h2 className="text-xl font-bold text-gray-900">Manage Fragrances</h2>
             </div>
-            <p className="text-gray-600">Edit existing fragrances and content</p>
-          </div>
+            <p className="text-gray-600">View and edit all fragrances</p>
+          </Link>
 
           <div className="bg-white border-2 border-gray-200 rounded-xl p-8">
             <div className="flex items-center space-x-4 mb-4">

@@ -1,7 +1,12 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/admin/fragrances/[id]/edit/page": "app/admin/fragrances/[id]/edit/page.js",
+  "/admin/fragrances/new/page": "app/admin/fragrances/new/page.js",
+  "/admin/fragrances/page": "app/admin/fragrances/page.js",
   "/admin/page": "app/admin/page.js",
+  "/api/admin/fragrances/[id]/route": "app/api/admin/fragrances/[id]/route.js",
+  "/api/admin/fragrances/route": "app/api/admin/fragrances/route.js",
   "/brands/page": "app/brands/page.js",
   "/fragrances/[id]/page": "app/fragrances/[id]/page.js",
   "/fragrances/page": "app/fragrances/page.js",
