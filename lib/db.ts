@@ -8,8 +8,8 @@ const globalForPrisma = globalThis as unknown as {
 
 // Only create Pool/Prisma client once and cache globally
 if (!globalForPrisma.prisma) {
-  // Configure SSL for Supabase connections
-  const isSupabase = process.env.DATABASE_DIRECT_URL?.includes('supabase.com')
+  // Configure SSL for Supabase connections (note: Supabase uses .co not .com)
+  const isSupabase = process.env.DATABASE_DIRECT_URL?.includes('supabase.co')
 
   // For Supabase, configure SSL to accept self-signed certificates
   const sslConfig = isSupabase ? {
