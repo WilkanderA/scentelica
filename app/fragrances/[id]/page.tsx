@@ -5,6 +5,9 @@ import FragranceHeader from "@/components/FragranceHeader";
 import NotesVisualization from "@/components/NotesVisualization";
 import RetailerLinks from "@/components/RetailerLinks";
 import CommentSection from "@/components/CommentSection";
+import { CommentForm } from "@/components/CommentForm";
+import { SignInButton } from "@/components/auth/SignInButton";
+import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = 'force-dynamic';
 
@@ -54,6 +57,10 @@ export async function generateMetadata({ params }: FragrancePageProps): Promise<
 
 export default async function FragrancePage({ params }: FragrancePageProps) {
   const { id } = await params;
+
+  // Check authentication
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
 
   const fragrance = await prisma.fragrance.findUnique({
     where: { id },
@@ -153,7 +160,20 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
 
         <RetailerLinks retailers={fragrance.retailers} />
 
-        <CommentSection comments={fragrance.comments} />
+        <CommentSection
+          comments={fragrance.comments}
+          fragranceId={fragrance.id}
+          showForm={
+            user ? (
+              <CommentForm fragranceId={fragrance.id} />
+            ) : (
+              <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
+                <p className="text-gray-600 mb-4">Sign in to leave a review</p>
+                <SignInButton />
+              </div>
+            )
+          }
+        />
       </div>
     </div>
   );

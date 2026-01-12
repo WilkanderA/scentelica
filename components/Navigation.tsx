@@ -2,22 +2,37 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import type { ReactNode } from "react";
+import { SearchBar } from "./SearchBar";
 
-export default function Navigation() {
+interface NavigationProps {
+  authStatus?: ReactNode;
+}
+
+export default function Navigation({ authStatus }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            aria-label="Go to homepage"
+          >
+            <span className="text-2xl font-bold text-primary">
               Scentelica
             </span>
           </Link>
 
+          {/* Desktop Search */}
+          <div className="hidden md:flex items-center flex-1 justify-center px-8 max-w-2xl">
+            <SearchBar />
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/fragrances"
               className="text-gray-700 hover:text-primary transition-colors font-medium"
@@ -36,15 +51,12 @@ export default function Navigation() {
             >
               Notes
             </Link>
+            {authStatus}
           </div>
 
-          <div className="flex items-center space-x-4">
-            <Link
-              href="/admin"
-              className="hidden sm:block px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-medium text-sm"
-            >
-              Admin
-            </Link>
+          {/* Mobile Icons */}
+          <div className="flex md:hidden items-center space-x-4">
+            {authStatus}
 
             {/* Mobile Menu Button */}
             <button
@@ -69,6 +81,9 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-3">
+              <div className="mb-4">
+                <SearchBar />
+              </div>
               <Link
                 href="/fragrances"
                 className="text-gray-700 hover:text-primary transition-colors font-medium py-2"
@@ -89,13 +104,6 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Notes
-              </Link>
-              <Link
-                href="/admin"
-                className="text-primary hover:text-primary-dark transition-colors font-medium py-2 border-t border-gray-200 mt-2 pt-4"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Admin Panel
               </Link>
             </div>
           </div>

@@ -17,6 +17,8 @@
     "@prisma/adapter-pg-worker": "^6.9.0",
     "@prisma/client": "^7.2.0",
     "@prisma/extension-accelerate": "^3.0.1",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.90.1",
     "@tailwindcss/postcss": "^4.1.18",
     "dotenv": "^17.2.3",
     "next": "^16.1.1",

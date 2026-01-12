@@ -1,6 +1,6 @@
 import Link from "next/link";
 import FragranceCard from "@/components/FragranceCard";
-import SearchBar from "@/components/SearchBar";
+import { SearchBar } from "@/components/SearchBar";
 import { prisma } from "@/lib/db";
 
 export const dynamic = 'force-dynamic';
