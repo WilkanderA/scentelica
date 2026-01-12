@@ -8,28 +8,35 @@ const globalForPrisma = globalThis as unknown as {
 
 // Only create Pool/Prisma client once and cache globally
 if (!globalForPrisma.prisma) {
-  // Configure SSL for Supabase connections (note: Supabase uses .co not .com)
-  const isSupabase = process.env.DATABASE_DIRECT_URL?.includes('supabase.co')
+  // Detect Supabase connection type (check pooler FIRST as it contains both strings)
+  const isSupabasePooler = process.env.DATABASE_DIRECT_URL?.includes('pooler.supabase.com')
+  const isSupabaseDirectHost = !isSupabasePooler && process.env.DATABASE_DIRECT_URL?.includes('db.') && process.env.DATABASE_DIRECT_URL?.includes('supabase.co')
 
   console.log('=== Database Connection Initialization ===')
   console.log('DATABASE_DIRECT_URL exists:', !!process.env.DATABASE_DIRECT_URL)
-  console.log('Is Supabase detected:', isSupabase)
+  console.log('Is Supabase direct host:', isSupabaseDirectHost)
+  console.log('Is Supabase pooler:', isSupabasePooler)
   console.log('Environment:', process.env.NODE_ENV)
 
-  // For Supabase, configure SSL to accept self-signed certificates
-  const sslConfig = isSupabase ? {
-    rejectUnauthorized: false,
-    // Try multiple approaches to ensure SSL works
-    checkServerIdentity: () => undefined as any
-  } : undefined
-
-  console.log('SSL Config enabled:', !!sslConfig)
-
   try {
+    console.log('Creating pg Pool with adapter')
+
+    // SSL configuration - needed for both pooler and direct host
+    const sslConfig = (isSupabasePooler || isSupabaseDirectHost) ? {
+      rejectUnauthorized: false,
+      checkServerIdentity: () => undefined as any
+    } : undefined
+
+    // Pool configuration - optimized for serverless/pgbouncer
     const pool = new Pool({
       connectionString: process.env.DATABASE_DIRECT_URL,
-      ssl: sslConfig
+      ssl: sslConfig,
+      // For pgbouncer compatibility
+      max: 1,  // Minimize connections in serverless
+      idleTimeoutMillis: 0,  // Prevent idle timeout
+      connectionTimeoutMillis: 10000  // 10 second connection timeout
     })
+
     const adapter = new PrismaPg(pool)
 
     globalForPrisma.prisma = new PrismaClient({
