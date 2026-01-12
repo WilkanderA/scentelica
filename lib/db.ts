@@ -8,17 +8,19 @@ const globalForPrisma = globalThis as unknown as {
 
 // Only create Pool/Prisma client once and cache globally
 if (!globalForPrisma.prisma) {
-  // Configure SSL for Supabase connections - disable certificate verification
+  // Configure SSL for Supabase connections
   const isSupabase = process.env.DATABASE_DIRECT_URL?.includes('supabase.com')
 
-  if (isSupabase) {
-    // For Supabase, we need to disable TLS rejection
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
-  }
+  // For Supabase, configure SSL to accept self-signed certificates
+  const sslConfig = isSupabase ? {
+    rejectUnauthorized: false,
+    // Try multiple approaches to ensure SSL works
+    checkServerIdentity: () => undefined as any
+  } : undefined
 
   const pool = new Pool({
     connectionString: process.env.DATABASE_DIRECT_URL,
-    ssl: isSupabase ? true : undefined
+    ssl: sslConfig
   })
   const adapter = new PrismaPg(pool)
 
