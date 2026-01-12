@@ -6,15 +6,39 @@ import { prisma } from "@/lib/db";
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  const fragrances = await prisma.fragrance.findMany({
-    include: {
-      brand: true,
-    },
-    orderBy: {
-      ratingAvg: 'desc',
-    },
-    take: 6,
-  });
+  let fragrances;
+
+  try {
+    console.log('=== Fetching fragrances from database ===')
+    fragrances = await prisma.fragrance.findMany({
+      include: {
+        brand: true,
+      },
+      orderBy: {
+        ratingAvg: 'desc',
+      },
+      take: 6,
+    });
+    console.log('✓ Successfully fetched', fragrances.length, 'fragrances')
+  } catch (error: any) {
+    console.error('✗ Database query failed:', error)
+    console.error('Error message:', error.message)
+    console.error('Error code:', error.code)
+    console.error('Error stack:', error.stack)
+
+    // Return error UI instead of hanging
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="max-w-2xl mx-auto p-8 bg-red-50 border border-red-200 rounded-lg">
+          <h2 className="text-2xl font-bold text-red-900 mb-4">Database Error</h2>
+          <p className="text-red-700 mb-2">Failed to load fragrances from the database.</p>
+          <pre className="text-sm bg-red-100 p-4 rounded overflow-auto">
+            {error.message}
+          </pre>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
