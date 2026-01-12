@@ -5,8 +5,12 @@ import { config } from 'dotenv'
 
 config()
 
-// Use TCP connection for seeding
-const pool = new Pool({ connectionString: process.env.DATABASE_DIRECT_URL })
+// Use TCP connection for seeding with SSL for Supabase
+const isSupabase = process.env.DATABASE_DIRECT_URL?.includes('supabase.com')
+const pool = new Pool({
+  connectionString: process.env.DATABASE_DIRECT_URL,
+  ssl: isSupabase ? { rejectUnauthorized: false } : undefined
+})
 const adapter = new PrismaPg(pool)
 
 const prisma = new PrismaClient({ adapter })
