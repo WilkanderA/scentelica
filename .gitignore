@@ -96,3 +96,6 @@ VERCEL_READY.md
 # Test files
 check-db.ts
 test-pool.ts
+
+.env.vercel.check
+scentelica/.env.vercel.check
