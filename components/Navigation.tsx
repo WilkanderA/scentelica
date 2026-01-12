@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { SearchBar } from "./SearchBar";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface NavigationProps {
   authStatus?: ReactNode;
@@ -13,12 +14,12 @@ export default function Navigation({ authStatus }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <nav className="bg-white dark:bg-surface-10 border-b border-gray-200 dark:border-tonal-30 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-tonal-20 transition-colors"
             aria-label="Go to homepage"
           >
             <span className="text-2xl font-bold text-primary">
@@ -35,33 +36,35 @@ export default function Navigation({ authStatus }: NavigationProps) {
           <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/fragrances"
-              className="text-gray-700 hover:text-primary transition-colors font-medium"
+              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Browse
             </Link>
             <Link
               href="/brands"
-              className="text-gray-700 hover:text-primary transition-colors font-medium"
+              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Brands
             </Link>
             <Link
               href="/notes"
-              className="text-gray-700 hover:text-primary transition-colors font-medium"
+              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Notes
             </Link>
+            <ThemeToggle />
             {authStatus}
           </div>
 
           {/* Mobile Icons */}
           <div className="flex md:hidden items-center space-x-4">
+            <ThemeToggle />
             {authStatus}
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-primary"
+              className="md:hidden p-2 text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -79,28 +82,28 @@ export default function Navigation({ authStatus }: NavigationProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 dark:border-tonal-30">
             <div className="flex flex-col space-y-3">
               <div className="mb-4">
                 <SearchBar />
               </div>
               <Link
                 href="/fragrances"
-                className="text-gray-700 hover:text-primary transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Browse Fragrances
               </Link>
               <Link
                 href="/brands"
-                className="text-gray-700 hover:text-primary transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Brands
               </Link>
               <Link
                 href="/notes"
-                className="text-gray-700 hover:text-primary transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Notes

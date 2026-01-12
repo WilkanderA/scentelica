@@ -42,16 +42,16 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-primary/5 via-accent-lavender/10 to-accent-rose/5 py-20">
+      <section className="bg-gradient-to-br from-primary/5 via-accent-lavender/10 to-accent-rose/5 dark:from-tonal-10 dark:via-tonal-20 dark:to-tonal-10 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
               Discover Your
-              <span className="block bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-primary to-primary-dark dark:from-primary-dm dark:to-primary-dm-40 bg-clip-text text-transparent">
                 Signature Scent
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-surface-50 max-w-2xl mx-auto">
               Explore the world's finest fragrances. Read authentic reviews, discover notes, and find where to buy.
             </p>
             <div className="flex justify-center">
@@ -61,14 +61,14 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-gray-50 dark:bg-surface-10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                 Top Rated Fragrances
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-surface-50">
                 Discover the most loved scents by our community
               </p>
             </div>

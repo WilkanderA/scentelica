@@ -24,8 +24,8 @@ export default function FragranceCard({
 }: FragranceCardProps) {
   return (
     <Link href={`/fragrances/${id}`}>
-      <div className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-        <div className="relative aspect-square bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+      <div className="group bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-30 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div className="relative aspect-square bg-gradient-to-br from-gray-50 to-gray-100 dark:from-tonal-10 dark:to-tonal-30 p-8">
           {bottleImageUrl ? (
             <Image
               src={bottleImageUrl}
@@ -43,10 +43,10 @@ export default function FragranceCard({
         <div className="p-6">
           <div className="flex items-start justify-between gap-2 mb-2">
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-1">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors line-clamp-1">
                 {name}
               </h3>
-              <p className="text-sm text-gray-600 font-medium">{brand}</p>
+              <p className="text-sm text-gray-600 dark:text-surface-50 font-medium">{brand}</p>
             </div>
             {ratingAvg && (
               <div className="flex items-center space-x-1 bg-primary/10 px-2 py-1 rounded-full">
@@ -60,17 +60,17 @@ export default function FragranceCard({
             )}
           </div>
 
-          <div className="flex items-center space-x-2 text-xs text-gray-500">
+          <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-surface-50">
             {gender && (
-              <span className="px-2 py-1 bg-gray-100 rounded-full">{gender}</span>
+              <span className="px-2 py-1 bg-gray-100 dark:bg-tonal-30 rounded-full">{gender}</span>
             )}
             {concentration && (
-              <span className="px-2 py-1 bg-gray-100 rounded-full">{concentration}</span>
+              <span className="px-2 py-1 bg-gray-100 dark:bg-tonal-30 rounded-full">{concentration}</span>
             )}
           </div>
 
           {reviewCount !== undefined && reviewCount > 0 && (
-            <p className="mt-3 text-xs text-gray-500">
+            <p className="mt-3 text-xs text-gray-500 dark:text-surface-50">
               {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
             </p>
           )}
