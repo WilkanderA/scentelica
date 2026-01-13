@@ -22,8 +22,8 @@ export default function RetailerLinks({ retailers }: RetailerLinksProps) {
   }
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-8">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Where to Buy</h3>
+    <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-8">
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Where to Buy</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {retailers.map((link) => (
           <a
@@ -31,21 +31,21 @@ export default function RetailerLinks({ retailers }: RetailerLinksProps) {
             href={link.productUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition-all group"
+            className="flex items-center justify-between p-4 border-2 border-gray-200 dark:border-tonal-40 rounded-lg hover:border-primary dark:hover:border-primary-dm hover:shadow-md transition-all group"
           >
             <div className="flex-1">
-              <p className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+              <p className="font-semibold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors">
                 {link.retailer.name}
               </p>
               {link.price && link.currency && (
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                   {link.currency === 'USD' ? '$' : link.currency}
                   {link.price.toFixed(2)}
                 </p>
               )}
             </div>
             <svg
-              className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors"
+              className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary-dm transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

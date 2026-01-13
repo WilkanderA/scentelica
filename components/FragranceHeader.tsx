@@ -24,10 +24,10 @@ export default function FragranceHeader({
   description,
 }: FragranceHeaderProps) {
   return (
-    <div className="bg-gradient-to-br from-primary/5 via-accent-lavender/10 to-accent-rose/5 -mt-6">
+    <div className="bg-gradient-to-br from-primary/5 via-accent-lavender/10 to-accent-rose/5 dark:from-primary-dm/5 dark:via-accent-lavender/5 dark:to-accent-rose/5 -mt-6">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square bg-white rounded-2xl shadow-xl p-12">
+          <div className="relative aspect-square bg-white dark:bg-tonal-20 rounded-2xl shadow-xl p-12">
             {bottleImageUrl ? (
               <Image
                 src={bottleImageUrl}
@@ -38,32 +38,32 @@ export default function FragranceHeader({
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
-                <div className="w-48 h-64 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl"></div>
+                <div className="w-48 h-64 bg-gradient-to-br from-primary/20 to-primary/5 dark:from-primary-dm/20 dark:to-primary-dm/5 rounded-2xl"></div>
               </div>
             )}
           </div>
 
           <div className="space-y-6">
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                 {name}
               </h1>
-              <p className="text-2xl text-gray-600 font-medium">{brand}</p>
+              <p className="text-2xl text-gray-600 dark:text-gray-300 font-medium">{brand}</p>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
               {gender && (
-                <span className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700">
+                <span className="px-4 py-2 bg-white dark:bg-tonal-30 border border-gray-200 dark:border-tonal-40 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">
                   {gender}
                 </span>
               )}
               {concentration && (
-                <span className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700">
+                <span className="px-4 py-2 bg-white dark:bg-tonal-30 border border-gray-200 dark:border-tonal-40 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">
                   {concentration}
                 </span>
               )}
               {year && (
-                <span className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700">
+                <span className="px-4 py-2 bg-white dark:bg-tonal-30 border border-gray-200 dark:border-tonal-40 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300">
                   {year}
                 </span>
               )}
@@ -71,22 +71,22 @@ export default function FragranceHeader({
 
             {ratingAvg && (
               <div className="flex items-center space-x-4 py-4">
-                <div className="flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full">
-                  <svg className="w-6 h-6 text-primary fill-current" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-2 bg-primary/10 dark:bg-primary-dm/20 px-4 py-2 rounded-full">
+                  <svg className="w-6 h-6 text-primary dark:text-primary-dm fill-current" viewBox="0 0 20 20">
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
-                  <span className="text-2xl font-bold text-primary">
+                  <span className="text-2xl font-bold text-primary dark:text-primary-dm">
                     {ratingAvg.toFixed(1)}
                   </span>
                 </div>
-                <span className="text-gray-600">
+                <span className="text-gray-600 dark:text-gray-300">
                   {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
                 </span>
               </div>
             )}
 
             {description && (
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 {description}
               </p>
             )}

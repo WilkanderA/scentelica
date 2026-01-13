@@ -29,10 +29,10 @@ export default async function HomePage() {
     // Return error UI instead of hanging
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="max-w-2xl mx-auto p-8 bg-red-50 border border-red-200 rounded-lg">
-          <h2 className="text-2xl font-bold text-red-900 mb-4">Database Error</h2>
-          <p className="text-red-700 mb-2">Failed to load fragrances from the database.</p>
-          <pre className="text-sm bg-red-100 p-4 rounded overflow-auto">
+        <div className="max-w-2xl mx-auto p-8 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+          <h2 className="text-2xl font-bold text-red-900 dark:text-red-300 mb-4">Database Error</h2>
+          <p className="text-red-700 dark:text-red-300 mb-2">Failed to load fragrances from the database.</p>
+          <pre className="text-sm bg-red-100 dark:bg-red-900/30 text-red-900 dark:text-red-300 p-4 rounded overflow-auto">
             {error.message}
           </pre>
         </div>
@@ -74,7 +74,7 @@ export default async function HomePage() {
             </div>
             <Link
               href="/fragrances"
-              className="px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-lg font-medium"
+              className="px-6 py-3 border-2 border-primary dark:border-primary-dm text-primary dark:text-primary-dm hover:bg-primary dark:hover:bg-primary-dm hover:text-white transition-all rounded-lg font-medium"
             >
               View All
             </Link>

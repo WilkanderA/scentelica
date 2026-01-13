@@ -15,8 +15,8 @@ export default async function NewFragrancePage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Add New Fragrance</h1>
-        <p className="text-gray-600">Create a new fragrance entry in the database</p>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Add New Fragrance</h1>
+        <p className="text-gray-600 dark:text-gray-300">Create a new fragrance entry in the database</p>
       </div>
 
       <FragranceForm brands={brands} notes={notes} />

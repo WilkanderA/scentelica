@@ -154,7 +154,7 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
       />
 
       <div className="container mx-auto px-4 py-16 space-y-16">
-        <div className="bg-white rounded-xl border border-gray-200 p-8">
+        <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-8">
           <NotesVisualization notes={notes} />
         </div>
 
@@ -167,8 +167,8 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
             user ? (
               <CommentForm fragranceId={fragrance.id} />
             ) : (
-              <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
-                <p className="text-gray-600 mb-4">Sign in to leave a review</p>
+              <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-6 text-center">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Sign in to leave a review</p>
                 <SignInButton />
               </div>
             )

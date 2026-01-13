@@ -110,16 +110,16 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
   return (
     <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-8">
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 px-4 py-3 rounded-lg">
           {error}
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 p-8 space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Basic Information</h2>
+      <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-8 space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Basic Information</h2>
 
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
             Fragrance Name *
           </label>
           <input
@@ -127,20 +127,20 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
             placeholder="e.g., Bleu de Chanel"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
             Brand *
           </label>
           <select
             required
             value={formData.brandId}
             onChange={(e) => setFormData({ ...formData, brandId: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
           >
             <option value="">Select a brand</option>
             {brands.map(brand => (
@@ -151,14 +151,14 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Year
             </label>
             <input
               type="number"
               value={formData.year}
               onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
               placeholder="2010"
               min="1900"
               max="2030"
@@ -166,13 +166,13 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Gender
             </label>
             <select
               value={formData.gender}
               onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
             >
               <option value="">Select</option>
               <option value="Men">Men</option>
@@ -182,13 +182,13 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Concentration
             </label>
             <select
               value={formData.concentration}
               onChange={(e) => setFormData({ ...formData, concentration: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
             >
               <option value="">Select</option>
               <option value="Parfum">Parfum</option>
@@ -200,38 +200,38 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
             Description
           </label>
           <textarea
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
             rows={4}
             placeholder="Describe the fragrance..."
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
             Bottle Image URL
           </label>
           <input
             type="url"
             value={formData.bottleImageUrl}
             onChange={(e) => setFormData({ ...formData, bottleImageUrl: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
             placeholder="https://example.com/image.jpg"
           />
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-8 space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Fragrance Notes</h2>
+      <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-8 space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Fragrance Notes</h2>
 
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Top Notes</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Top Notes</h3>
             <div className="flex flex-wrap gap-2">
               {topNotes.map(note => {
                 const selected = selectedNotes.find(n => n.noteId === note.id);
@@ -243,7 +243,7 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                       selected
                         ? "bg-accent-mint text-gray-900 border-2 border-accent-mint"
-                        : "bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300"
+                        : "bg-gray-100 dark:bg-tonal-30 text-gray-700 dark:text-gray-300 border-2 border-transparent hover:border-gray-300 dark:hover:border-tonal-50"
                     }`}
                   >
                     {note.name}
@@ -254,7 +254,7 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Heart Notes</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Heart Notes</h3>
             <div className="flex flex-wrap gap-2">
               {heartNotes.map(note => {
                 const selected = selectedNotes.find(n => n.noteId === note.id);
@@ -266,7 +266,7 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                       selected
                         ? "bg-accent-lavender text-gray-900 border-2 border-accent-lavender"
-                        : "bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300"
+                        : "bg-gray-100 dark:bg-tonal-30 text-gray-700 dark:text-gray-300 border-2 border-transparent hover:border-gray-300 dark:hover:border-tonal-50"
                     }`}
                   >
                     {note.name}
@@ -277,7 +277,7 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Base Notes</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Base Notes</h3>
             <div className="flex flex-wrap gap-2">
               {baseNotes.map(note => {
                 const selected = selectedNotes.find(n => n.noteId === note.id);
@@ -289,7 +289,7 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                       selected
                         ? "bg-accent-rose text-gray-900 border-2 border-accent-rose"
-                        : "bg-gray-100 text-gray-700 border-2 border-transparent hover:border-gray-300"
+                        : "bg-gray-100 dark:bg-tonal-30 text-gray-700 dark:text-gray-300 border-2 border-transparent hover:border-gray-300 dark:hover:border-tonal-50"
                     }`}
                   >
                     {note.name}
@@ -305,14 +305,14 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
         <button
           type="button"
           onClick={() => router.back()}
-          className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+          className="px-6 py-3 border-2 border-gray-300 dark:border-tonal-40 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-tonal-30 transition-colors font-medium"
         >
           Cancel
         </button>
         <button
           type="submit"
           disabled={loading}
-          className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-medium disabled:opacity-50"
+          className="px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50"
         >
           {loading ? "Saving..." : initialData ? "Update Fragrance" : "Create Fragrance"}
         </button>

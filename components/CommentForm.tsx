@@ -57,17 +57,17 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-      <h3 className="text-xl font-bold text-gray-900">Write a Review</h3>
+    <form onSubmit={handleSubmit} className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-6 space-y-4">
+      <h3 className="text-xl font-bold text-gray-900 dark:text-white">Write a Review</h3>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg text-sm">
           {error}
         </div>
       )}
 
       <div>
-        <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="rating" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Rating
         </label>
         <div className="flex items-center gap-2">
@@ -81,8 +81,8 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
               <svg
                 className={`w-8 h-8 ${
                   value <= rating
-                    ? 'text-primary fill-current'
-                    : 'text-gray-300 fill-current'
+                    ? 'text-primary dark:text-primary-dm fill-current'
+                    : 'text-gray-300 dark:text-gray-600 fill-current'
                 }`}
                 viewBox="0 0 20 20"
               >
@@ -90,12 +90,12 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
               </svg>
             </button>
           ))}
-          <span className="ml-2 text-sm text-gray-600 font-medium">{rating}/5</span>
+          <span className="ml-2 text-sm text-gray-600 dark:text-gray-300 font-medium">{rating}/5</span>
         </div>
       </div>
 
       <div>
-        <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="content" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Your Review
         </label>
         <textarea
@@ -104,7 +104,7 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
           onChange={(e) => setContent(e.target.value)}
           placeholder="Share your experience with this fragrance..."
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+          className="w-full px-4 py-3 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 resize-none"
           disabled={isSubmitting}
         />
       </div>
@@ -112,7 +112,7 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
       <button
         type="submit"
         disabled={isSubmitting || !content.trim()}
-        className="w-full sm:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full sm:w-auto px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Submitting...' : 'Submit Review'}
       </button>

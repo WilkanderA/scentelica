@@ -55,8 +55,8 @@ export default async function EditFragrancePage({ params }: EditFragrancePagePro
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Edit Fragrance</h1>
-        <p className="text-gray-600">Update fragrance information</p>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Edit Fragrance</h1>
+        <p className="text-gray-600 dark:text-gray-300">Update fragrance information</p>
       </div>
 
       <FragranceForm brands={brands} notes={notes} initialData={initialData} />

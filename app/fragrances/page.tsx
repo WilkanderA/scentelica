@@ -74,17 +74,17 @@ async function FragrancesList({ searchParams }: { searchParams: Awaited<Fragranc
 
         <main className="lg:col-span-3">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
               {search ? `Search results for "${search}"` : 'All Fragrances'}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               {fragrances.length} {fragrances.length === 1 ? 'fragrance' : 'fragrances'} found
             </p>
           </div>
 
           {fragrances.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-gray-500 text-lg">
+              <p className="text-gray-500 dark:text-gray-400 text-lg">
                 No fragrances found. Try adjusting your filters.
               </p>
             </div>
