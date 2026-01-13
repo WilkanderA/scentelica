@@ -1,54 +1,29 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
-  // Load theme from localStorage on mount
+  // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
-
-    setIsDark(shouldBeDark)
-    if (shouldBeDark) {
-      document.documentElement.classList.add('dark')
-    }
     setMounted(true)
   }, [])
 
-  // Toggle theme
-  const toggleTheme = () => {
-    const newIsDark = !isDark
-
-    if (newIsDark) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
-
-    setIsDark(newIsDark)
-
-    // Force a slight delay to ensure DOM updates
-    setTimeout(() => {
-      window.dispatchEvent(new Event('storage'))
-    }, 0)
-  }
-
-  // Avoid hydration mismatch
   if (!mounted) {
+    // Return a placeholder with the same dimensions to avoid layout shift
     return (
       <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
     )
   }
 
+  const isDark = theme === 'dark'
+
   return (
     <button
-      onClick={toggleTheme}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-tonal-20 border border-gray-300 dark:border-tonal-40 hover:bg-gray-50 dark:hover:bg-tonal-30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-primary-dm transition-colors"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}

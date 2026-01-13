@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* Light mode primary (gold) */
+  /* Light mode colors */
   --color-primary: #D4AF37;
   --color-primary-light: #E5C158;
   --color-primary-dark: #B8941F;
 
-  /* Secondary */
   --color-secondary: #1E3A5F;
   --color-secondary-light: #2B5280;
   --color-secondary-dark: #162942;
 
-  /* Accent colors */
   --color-accent-rose: #F4C2C2;
   --color-accent-lavender: #D4B5E6;
   --color-accent-mint: #B5E6D4;
 
-  /* Dark mode surface colors */
+  /* Dark mode colors - these work in dark: classes */
   --color-surface-10: #121212;
   --color-surface-20: #282828;
   --color-surface-30: #3f3f3f;
@@ -24,7 +24,6 @@
   --color-surface-50: #717171;
   --color-surface-60: #8b8b8b;
 
-  /* Dark mode tonal colors */
   --color-tonal-10: #181f21;
   --color-tonal-20: #2d3436;
   --color-tonal-30: #444a4c;
@@ -32,7 +31,6 @@
   --color-tonal-50: #75797b;
   --color-tonal-60: #8f9394;
 
-  /* Dark mode primary (cyan) */
   --color-primary-dm: #2aa6c2;
   --color-primary-dm-10: #2aa6c2;
   --color-primary-dm-20: #4fb0c9;
@@ -40,21 +38,9 @@
   --color-primary-dm-40: #82c3d6;
   --color-primary-dm-50: #99cddd;
   --color-primary-dm-60: #aed7e4;
+}
 
-  /* Semantic colors */
-  --color-success-10: #22946e;
-  --color-success-20: #47d5a6;
-  --color-success-30: #9ae8ce;
-
-  --color-warning-10: #a87a2a;
-  --color-warning-20: #d7ac61;
-  --color-warning-30: #ecd7b2;
-
-  --color-danger-10: #9c2121;
-  --color-danger-20: #d94a4a;
-  --color-danger-30: #eb9e9e;
-
-  --color-info-10: #21498a;
-  --color-info-20: #4077d1;
-  --color-info-30: #92b2e5;
+/* Force dark mode styles when .dark class is present */
+.dark {
+  color-scheme: dark;
 }

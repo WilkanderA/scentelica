@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { AuthStatus } from "@/components/auth/AuthStatus";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,32 +41,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-white dark:bg-surface-10 text-gray-900 dark:text-surface-60 transition-colors duration-200`}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (theme === 'dark' || (!theme && prefersDark)) {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-        <Navigation authStatus={<AuthStatus />} />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <footer className="bg-secondary dark:bg-tonal-10 text-white py-8 mt-16">
-          <div className="container mx-auto px-4 text-center">
-            <p className="text-sm">
-              © 2026 Scentelica. Discover your signature scent.
-            </p>
-          </div>
-        </footer>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navigation authStatus={<AuthStatus />} />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <footer className="bg-secondary dark:bg-tonal-10 text-white py-8 mt-16">
+            <div className="container mx-auto px-4 text-center">
+              <p className="text-sm">
+                © 2026 Scentelica. Discover your signature scent.
+              </p>
+            </div>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
