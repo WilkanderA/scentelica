@@ -22,7 +22,7 @@ export function SignInButton() {
 
     try {
       if (isSignUp) {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: {
@@ -33,11 +33,19 @@ export function SignInButton() {
         })
         if (error) throw error
 
-        // Sync user to database
-        await fetch('/api/auth/sync-user', { method: 'POST' })
-
-        setIsOpen(false)
-        router.refresh()
+        // Sync user to database if email confirmation is disabled
+        if (data.user && data.session) {
+          await fetch('/api/auth/sync-user', { method: 'POST' })
+          setIsOpen(false)
+          router.refresh()
+        } else {
+          // Email confirmation is required
+          setError('Success! Please check your email to confirm your account.')
+          setTimeout(() => {
+            setIsOpen(false)
+            setError(null)
+          }, 3000)
+        }
       } else {
         const { error } = await supabase.auth.signInWithPassword({
           email,
