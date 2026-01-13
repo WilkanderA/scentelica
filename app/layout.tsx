@@ -40,13 +40,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-white dark:bg-surface-10 text-gray-900 dark:text-surface-60 transition-colors duration-200`}>
+      <body className={`${inter.className} bg-white dark:bg-surface-10 text-gray-900 dark:text-gray-100 transition-colors duration-200`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation authStatus={<AuthStatus />} />
           <main className="min-h-screen">
             {children}
           </main>
-          <footer className="bg-secondary dark:bg-tonal-10 text-white py-8 mt-16">
+          <footer className="bg-gray-50 dark:bg-tonal-10 text-gray-700 dark:text-white py-8 mt-16 border-t border-gray-200 dark:border-tonal-30">
             <div className="container mx-auto px-4 text-center">
               <p className="text-sm">
                 © 2026 Scentelica. Discover your signature scent.

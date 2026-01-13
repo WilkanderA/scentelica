@@ -46,7 +46,7 @@ export default function FragranceCard({
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors line-clamp-1">
                 {name}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-surface-50 font-medium">{brand}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">{brand}</p>
             </div>
             {ratingAvg && (
               <div className="flex items-center space-x-1 bg-primary/10 px-2 py-1 rounded-full">
@@ -60,7 +60,7 @@ export default function FragranceCard({
             )}
           </div>
 
-          <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-surface-50">
+          <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-300">
             {gender && (
               <span className="px-2 py-1 bg-gray-100 dark:bg-tonal-30 rounded-full">{gender}</span>
             )}
@@ -70,7 +70,7 @@ export default function FragranceCard({
           </div>
 
           {reviewCount !== undefined && reviewCount > 0 && (
-            <p className="mt-3 text-xs text-gray-500 dark:text-surface-50">
+            <p className="mt-3 text-xs text-gray-500 dark:text-gray-300">
               {reviewCount} {reviewCount === 1 ? 'review' : 'reviews'}
             </p>
           )}

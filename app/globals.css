@@ -16,28 +16,30 @@
   --color-accent-lavender: #D4B5E6;
   --color-accent-mint: #B5E6D4;
 
-  /* Dark mode colors - these work in dark: classes */
-  --color-surface-10: #121212;
-  --color-surface-20: #282828;
-  --color-surface-30: #3f3f3f;
-  --color-surface-40: #575757;
-  --color-surface-50: #717171;
-  --color-surface-60: #8b8b8b;
+  /* Dark mode background colors */
+  --color-surface-10: #1a1a1a;
+  --color-surface-20: #2d2d2d;
+  --color-surface-30: #3a3a3a;
+  --color-surface-40: #4a4a4a;
+  --color-surface-50: #9ca3af;
+  --color-surface-60: #d1d5db;
 
-  --color-tonal-10: #181f21;
-  --color-tonal-20: #2d3436;
-  --color-tonal-30: #444a4c;
-  --color-tonal-40: #5c6163;
-  --color-tonal-50: #75797b;
-  --color-tonal-60: #8f9394;
+  /* Dark mode card/surface colors */
+  --color-tonal-10: #1f1f1f;
+  --color-tonal-20: #2d2d2d;
+  --color-tonal-30: #3f3f3f;
+  --color-tonal-40: #525252;
+  --color-tonal-50: #6b7280;
+  --color-tonal-60: #9ca3af;
 
-  --color-primary-dm: #2aa6c2;
-  --color-primary-dm-10: #2aa6c2;
-  --color-primary-dm-20: #4fb0c9;
-  --color-primary-dm-30: #6bbacf;
-  --color-primary-dm-40: #82c3d6;
-  --color-primary-dm-50: #99cddd;
-  --color-primary-dm-60: #aed7e4;
+  /* Dark mode primary (cyan/teal) */
+  --color-primary-dm: #5eead4;
+  --color-primary-dm-10: #5eead4;
+  --color-primary-dm-20: #2dd4bf;
+  --color-primary-dm-30: #14b8a6;
+  --color-primary-dm-40: #0d9488;
+  --color-primary-dm-50: #0f766e;
+  --color-primary-dm-60: #115e59;
 }
 
 /* Force dark mode styles when .dark class is present */

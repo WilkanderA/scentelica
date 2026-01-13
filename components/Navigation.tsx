@@ -36,19 +36,19 @@ export default function Navigation({ authStatus }: NavigationProps) {
           <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/fragrances"
-              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Browse
             </Link>
             <Link
               href="/brands"
-              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Brands
             </Link>
             <Link
               href="/notes"
-              className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium"
             >
               Notes
             </Link>
@@ -64,7 +64,7 @@ export default function Navigation({ authStatus }: NavigationProps) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm"
+              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -89,21 +89,21 @@ export default function Navigation({ authStatus }: NavigationProps) {
               </div>
               <Link
                 href="/fragrances"
-                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Browse Fragrances
               </Link>
               <Link
                 href="/brands"
-                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Brands
               </Link>
               <Link
                 href="/notes"
-                className="text-gray-700 dark:text-surface-60 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dm transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Notes
