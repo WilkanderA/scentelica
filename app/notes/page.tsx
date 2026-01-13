@@ -1,4 +1,6 @@
 import { prisma } from "@/lib/db";
+import Link from "next/link";
+import Image from "next/image";
 
 export const dynamic = 'force-dynamic';
 
@@ -17,17 +19,32 @@ export default async function NotesPage() {
   const baseNotes = notes.filter((n: typeof notes[0]) => n.category === 'base');
 
   const NoteCard = ({ note }: { note: typeof notes[0] }) => (
-    <div className="bg-white dark:bg-tonal-20 border-2 border-gray-200 dark:border-tonal-40 rounded-xl p-6 hover:border-primary dark:hover:border-primary-dm hover:shadow-lg transition-all group">
-      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors mb-2">
-        {note.name}
-      </h3>
-      {note.description && (
-        <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{note.description}</p>
+    <Link
+      href={`/notes/${note.id}`}
+      className="bg-white dark:bg-tonal-20 border-2 border-gray-200 dark:border-tonal-40 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary-dm hover:shadow-lg transition-all group block cursor-pointer"
+    >
+      {note.imageUrl && (
+        <div className="relative w-full h-48 bg-gray-100 dark:bg-tonal-30">
+          <Image
+            src={note.imageUrl}
+            alt={note.name}
+            fill
+            className="object-cover"
+          />
+        </div>
       )}
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        Used in {note._count.fragrances} {note._count.fragrances === 1 ? 'fragrance' : 'fragrances'}
-      </p>
-    </div>
+      <div className="p-6">
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors mb-2">
+          {note.name}
+        </h3>
+        {note.description && (
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">{note.description}</p>
+        )}
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          Used in {note._count.fragrances} {note._count.fragrances === 1 ? 'fragrance' : 'fragrances'}
+        </p>
+      </div>
+    </Link>
   );
 
   return (

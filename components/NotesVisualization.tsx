@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Note {
   id: string;
   name: string;
@@ -13,17 +15,6 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
   const topNotes = notes.filter((n) => n.category === "top");
   const heartNotes = notes.filter((n) => n.category === "heart");
   const baseNotes = notes.filter((n) => n.category === "base");
-
-  const NoteTag = ({ note }: { note: Note }) => (
-    <span
-      className="px-4 py-2 rounded-full text-sm font-medium transition-all hover:scale-105"
-      style={{
-        opacity: note.intensity ? 0.5 + (note.intensity / 10) : 0.8,
-      }}
-    >
-      {note.name}
-    </span>
-  );
 
   return (
     <div className="space-y-8">
@@ -47,12 +38,13 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {topNotes.map((note) => (
-                  <span
+                  <Link
                     key={note.id}
-                    className="px-4 py-2 bg-accent-mint/30 dark:bg-accent-mint/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-mint/50 dark:hover:bg-accent-mint/60 transition-all"
+                    href={`/notes/${note.id}`}
+                    className="px-4 py-2 bg-accent-mint/30 dark:bg-accent-mint/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-mint/50 dark:hover:bg-accent-mint/60 transition-all cursor-pointer"
                   >
                     {note.name}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
@@ -72,12 +64,13 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {heartNotes.map((note) => (
-                  <span
+                  <Link
                     key={note.id}
-                    className="px-4 py-2 bg-accent-lavender/30 dark:bg-accent-lavender/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-lavender/50 dark:hover:bg-accent-lavender/60 transition-all"
+                    href={`/notes/${note.id}`}
+                    className="px-4 py-2 bg-accent-lavender/30 dark:bg-accent-lavender/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-lavender/50 dark:hover:bg-accent-lavender/60 transition-all cursor-pointer"
                   >
                     {note.name}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
@@ -97,12 +90,13 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {baseNotes.map((note) => (
-                  <span
+                  <Link
                     key={note.id}
-                    className="px-4 py-2 bg-accent-rose/30 dark:bg-accent-rose/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-rose/50 dark:hover:bg-accent-rose/60 transition-all"
+                    href={`/notes/${note.id}`}
+                    className="px-4 py-2 bg-accent-rose/30 dark:bg-accent-rose/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-rose/50 dark:hover:bg-accent-rose/60 transition-all cursor-pointer"
                   >
                     {note.name}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
