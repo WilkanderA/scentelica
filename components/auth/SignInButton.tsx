@@ -32,14 +32,22 @@ export function SignInButton() {
           },
         })
         if (error) throw error
-        alert('Check your email for the confirmation link!')
+
+        // Sync user to database
+        await fetch('/api/auth/sync-user', { method: 'POST' })
+
         setIsOpen(false)
+        router.refresh()
       } else {
         const { error } = await supabase.auth.signInWithPassword({
           email,
           password,
         })
         if (error) throw error
+
+        // Sync user to database
+        await fetch('/api/auth/sync-user', { method: 'POST' })
+
         setIsOpen(false)
         router.refresh()
       }
