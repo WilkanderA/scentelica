@@ -10,15 +10,28 @@ export default async function HomePage() {
 
   try {
     console.log('=== Fetching fragrances from database ===')
-    fragrances = await prisma.fragrance.findMany({
+    const allFragrances = await prisma.fragrance.findMany({
       include: {
         brand: true,
       },
-      orderBy: {
-        ratingAvg: 'desc',
-      },
-      take: 6,
     });
+
+    // Sort: fragrances with ratings first (by rating desc), then fragrances without ratings
+    fragrances = allFragrances
+      .sort((a, b) => {
+        // If both have ratings, sort by rating descending
+        if (a.ratingAvg !== null && b.ratingAvg !== null) {
+          return b.ratingAvg - a.ratingAvg;
+        }
+        // If only a has a rating, a comes first
+        if (a.ratingAvg !== null) return -1;
+        // If only b has a rating, b comes first
+        if (b.ratingAvg !== null) return 1;
+        // If neither has a rating, maintain original order
+        return 0;
+      })
+      .slice(0, 6);
+
     console.log('✓ Successfully fetched', fragrances.length, 'fragrances')
   } catch (error: any) {
     console.error('✗ Database query failed:', error)
@@ -89,7 +102,7 @@ export default async function HomePage() {
                 brand={fragrance.brand.name}
                 gender={fragrance.gender || undefined}
                 concentration={fragrance.concentration || undefined}
-                ratingAvg={fragrance.ratingAvg || undefined}
+                ratingAvg={fragrance.ratingAvg !== null && fragrance.ratingAvg > 0 ? fragrance.ratingAvg : undefined}
                 reviewCount={fragrance.reviewCount}
                 bottleImageUrl={fragrance.bottleImageUrl || undefined}
               />

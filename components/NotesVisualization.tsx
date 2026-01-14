@@ -23,10 +23,7 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
         <p className="text-gray-600 dark:text-gray-300">Discover the layered scent profile</p>
       </div>
 
-      <div className="relative">
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-mint via-accent-lavender to-accent-rose dark:from-accent-mint/50 dark:via-accent-lavender/50 dark:to-accent-rose/50 -translate-x-1/2"></div>
-
-        <div className="space-y-12">
+      <div className="space-y-12">
           {topNotes.length > 0 && (
             <div className="relative">
               <div className="flex items-center justify-center mb-4">
@@ -104,7 +101,6 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </p>
             </div>
           )}
-        </div>
       </div>
     </div>
   );

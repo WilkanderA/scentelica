@@ -37,6 +37,21 @@ export default function AdminPage() {
             <p className="text-gray-600 dark:text-gray-300">View and edit all fragrances</p>
           </Link>
 
+          <Link
+            href="/admin/notes"
+            className="bg-white dark:bg-tonal-20 border-2 border-gray-200 dark:border-tonal-40 rounded-xl p-8 hover:border-primary dark:hover:border-primary-dm hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="w-12 h-12 bg-primary/10 dark:bg-primary-dm/20 rounded-lg flex items-center justify-center group-hover:bg-primary/20 dark:group-hover:bg-primary-dm/30 transition-colors">
+                <svg className="w-6 h-6 text-primary dark:text-primary-dm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Manage Notes</h2>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300">Add and edit fragrance notes with images</p>
+          </Link>
+
           <div className="bg-white dark:bg-tonal-20 border-2 border-gray-200 dark:border-tonal-40 rounded-xl p-8 opacity-60">
             <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 bg-primary/10 dark:bg-primary-dm/20 rounded-lg flex items-center justify-center">

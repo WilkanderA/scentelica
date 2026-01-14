@@ -1,3 +1,10 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Toast from "./Toast";
+import ConfirmDialog from "./ConfirmDialog";
+
 interface User {
   id: string;
   name: string | null;
@@ -18,9 +25,73 @@ interface CommentSectionProps {
   comments: Comment[];
   fragranceId?: string;
   showForm?: React.ReactNode;
+  isAdmin?: boolean;
+  userHelpfulVotes?: string[];
 }
 
-export default function CommentSection({ comments, fragranceId, showForm }: CommentSectionProps) {
+export default function CommentSection({ comments, fragranceId, showForm, isAdmin = false, userHelpfulVotes = [] }: CommentSectionProps) {
+  const router = useRouter();
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [helpfulLoading, setHelpfulLoading] = useState<string | null>(null);
+  const [toast, setToast] = useState<{ message: string; type: "error" | "success" | "info" } | null>(null);
+  const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
+
+  const handleHelpful = async (commentId: string) => {
+    setHelpfulLoading(commentId);
+
+    try {
+      const response = await fetch(`/api/comments/${commentId}/helpful`, {
+        method: 'POST',
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        setToast({ message: data.error || 'Failed to mark as helpful', type: 'error' });
+        return;
+      }
+
+      setToast({ message: 'Thank you for your feedback!', type: 'success' });
+      router.refresh();
+    } catch (error) {
+      console.error('Error marking comment as helpful:', error);
+      setToast({ message: 'Failed to mark as helpful', type: 'error' });
+    } finally {
+      setHelpfulLoading(null);
+    }
+  };
+
+  const handleDeleteClick = (commentId: string) => {
+    setConfirmDelete(commentId);
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!confirmDelete) return;
+
+    setDeletingId(confirmDelete);
+    setConfirmDelete(null);
+
+    try {
+      const response = await fetch(`/api/comments/${confirmDelete}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        setToast({ message: data.error || 'Failed to delete comment', type: 'error' });
+        return;
+      }
+
+      setToast({ message: 'Comment deleted successfully', type: 'success' });
+      router.refresh();
+    } catch (error) {
+      setToast({
+        message: error instanceof Error ? error.message : 'Failed to delete comment',
+        type: 'error'
+      });
+    } finally {
+      setDeletingId(null);
+    }
+  };
   if (comments.length === 0 && !showForm) {
     return (
       <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-40 p-8 text-center">
@@ -38,12 +109,31 @@ export default function CommentSection({ comments, fragranceId, showForm }: Comm
   };
 
   return (
-    <div className="space-y-6">
-      {showForm && (
-        <div className="mb-8">
-          {showForm}
-        </div>
+    <>
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
       )}
+      {confirmDelete && (
+        <ConfirmDialog
+          title="Delete Comment"
+          message="Are you sure you want to delete this comment? This action cannot be undone."
+          confirmText="Delete"
+          cancelText="Cancel"
+          type="danger"
+          onConfirm={handleDeleteConfirm}
+          onCancel={() => setConfirmDelete(null)}
+        />
+      )}
+      <div className="space-y-6">
+        {showForm && (
+          <div className="mb-8">
+            {showForm}
+          </div>
+        )}
 
       {comments.length > 0 && (
         <>
@@ -90,19 +180,41 @@ export default function CommentSection({ comments, fragranceId, showForm }: Comm
 
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{comment.content}</p>
 
-                <div className="flex items-center space-x-4 pt-2 border-t border-gray-100 dark:border-tonal-40">
-                  <button className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-dm transition-colors">
+                <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-tonal-40">
+                  <button
+                    onClick={() => handleHelpful(comment.id)}
+                    disabled={helpfulLoading === comment.id || userHelpfulVotes.includes(comment.id)}
+                    className={`flex items-center space-x-2 text-sm transition-colors disabled:opacity-50 ${
+                      userHelpfulVotes.includes(comment.id)
+                        ? 'text-primary dark:text-primary-dm cursor-default'
+                        : 'text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-dm'
+                    }`}
+                  >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                     </svg>
                     <span>Helpful ({comment.helpfulCount})</span>
                   </button>
+
+                  {isAdmin && (
+                    <button
+                      onClick={() => handleDeleteClick(comment.id)}
+                      disabled={deletingId === comment.id}
+                      className="flex items-center space-x-1 text-sm text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors disabled:opacity-50"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                      <span>{deletingId === comment.id ? 'Deleting...' : 'Delete'}</span>
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </>
       )}
-    </div>
+      </div>
+    </>
   );
 }

@@ -98,7 +98,7 @@ async function FragrancesList({ searchParams }: { searchParams: Awaited<Fragranc
                   brand={fragrance.brand.name}
                   gender={fragrance.gender || undefined}
                   concentration={fragrance.concentration || undefined}
-                  ratingAvg={fragrance.ratingAvg || undefined}
+                  ratingAvg={fragrance.ratingAvg !== null && fragrance.ratingAvg > 0 ? fragrance.ratingAvg : undefined}
                   reviewCount={fragrance.reviewCount}
                   bottleImageUrl={fragrance.bottleImageUrl || undefined}
                 />

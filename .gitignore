@@ -50,7 +50,9 @@ prisma/dev.db
 prisma/dev.db-journal
 prisma/*.db
 prisma/*.db-journal
-
+prisma/schema.prisma
+migrations/
+prisma/migrations/
 # IDE
 .vscode/*
 !.vscode/extensions.json
@@ -99,3 +101,5 @@ test-pool.ts
 
 .env.vercel.check
 scentelica/.env.vercel.check
+
+scripts

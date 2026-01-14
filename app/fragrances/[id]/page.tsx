@@ -62,6 +62,35 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
+  // Check if user is admin and get helpful votes
+  let isAdmin = false
+  let userHelpfulVotes: string[] = []
+
+  if (user) {
+    try {
+      const dbUser = await prisma.user.findUnique({
+        where: { id: user.id },
+        select: {
+          role: true,
+          helpfulVotes: {
+            select: {
+              commentId: true
+            }
+          }
+        }
+      })
+      isAdmin = dbUser?.role === 'admin'
+      userHelpfulVotes = dbUser?.helpfulVotes.map(v => v.commentId) || []
+    } catch (error) {
+      // If comment_helpful table doesn't exist yet, just get the role
+      const dbUser = await prisma.user.findUnique({
+        where: { id: user.id },
+        select: { role: true }
+      })
+      isAdmin = dbUser?.role === 'admin'
+    }
+  }
+
   const fragrance = await prisma.fragrance.findUnique({
     where: { id },
     include: {
@@ -163,6 +192,8 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
         <CommentSection
           comments={fragrance.comments}
           fragranceId={fragrance.id}
+          isAdmin={isAdmin}
+          userHelpfulVotes={userHelpfulVotes}
           showForm={
             user ? (
               <CommentForm fragranceId={fragrance.id} />

@@ -26,7 +26,7 @@ interface FragranceFormProps {
     concentration?: string | null;
     description?: string | null;
     bottleImageUrl?: string | null;
-    selectedNotes?: { noteId: string; category: string; intensity?: number }[];
+    selectedNotes?: { noteId: string; noteName: string; category: string; intensity?: number }[];
   };
 }
 
@@ -49,16 +49,28 @@ export default function FragranceForm({ brands, notes, initialData }: FragranceF
     noteId: string;
     category: string;
     intensity: number;
-  }[]>(initialData?.selectedNotes?.map(n => ({ ...n, intensity: n.intensity || 3 })) || []);
+  }[]>(initialData?.selectedNotes?.map(n => ({ noteId: n.noteId, category: n.category, intensity: n.intensity || 3 })) || []);
 
   const [customNotes, setCustomNotes] = useState<{
     top: string[];
     heart: string[];
     base: string[];
-  }>({
-    top: [],
-    heart: [],
-    base: []
+  }>(() => {
+    if (initialData?.selectedNotes) {
+      const topNotes = initialData.selectedNotes.filter(n => n.category === 'top').map(n => n.noteName);
+      const heartNotes = initialData.selectedNotes.filter(n => n.category === 'heart').map(n => n.noteName);
+      const baseNotes = initialData.selectedNotes.filter(n => n.category === 'base').map(n => n.noteName);
+      return {
+        top: topNotes,
+        heart: heartNotes,
+        base: baseNotes
+      };
+    }
+    return {
+      top: [],
+      heart: [],
+      base: []
+    };
   });
 
   const [noteInputs, setNoteInputs] = useState<{

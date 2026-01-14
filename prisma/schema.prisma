@@ -34,7 +34,7 @@ model Fragrance {
   concentration  String? // EDP, EDT, Parfum, Cologne, etc.
   description    String?
   bottleImageUrl String?
-  ratingAvg      Float?              @default(0)
+  ratingAvg      Float?
   reviewCount    Int                 @default(0)
   createdAt      DateTime            @default(now())
   updatedAt      DateTime            @updatedAt
@@ -119,6 +119,7 @@ model User {
   updatedAt       DateTime         @updatedAt
   comments        Comment[]
   userFragrances  UserFragrance[]
+  helpfulVotes    CommentHelpful[]
 
   @@map("users")
 }
@@ -145,18 +146,34 @@ model UserFragrance {
 
 // User comments and reviews
 model Comment {
-  id           String    @id @default(cuid())
+  id           String           @id @default(cuid())
   fragranceId  String
-  fragrance    Fragrance @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
+  fragrance    Fragrance        @relation(fields: [fragranceId], references: [id], onDelete: Cascade)
   userId       String
-  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   content      String
   rating       Int? // 1-5 stars
-  helpfulCount Int       @default(0)
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  helpfulCount Int              @default(0)
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  helpfulVotes CommentHelpful[]
 
   @@index([fragranceId])
   @@index([userId])
   @@map("comments")
+}
+
+// Track which users marked comments as helpful
+model CommentHelpful {
+  id        String   @id @default(cuid())
+  commentId String
+  comment   Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([commentId, userId])
+  @@index([commentId])
+  @@index([userId])
+  @@map("comment_helpful")
 }

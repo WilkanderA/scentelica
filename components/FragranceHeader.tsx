@@ -27,7 +27,7 @@ export default function FragranceHeader({
     <div className="bg-gradient-to-br from-primary/5 via-accent-lavender/10 to-accent-rose/5 dark:from-primary-dm/5 dark:via-accent-lavender/5 dark:to-accent-rose/5 -mt-6">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square bg-white dark:bg-tonal-20 rounded-2xl shadow-xl p-12">
+          <div className="relative aspect-square bg-white dark:bg-white rounded-2xl shadow-xl p-12">
             {bottleImageUrl ? (
               <Image
                 src={bottleImageUrl}
@@ -69,7 +69,7 @@ export default function FragranceHeader({
               )}
             </div>
 
-            {ratingAvg && (
+            {ratingAvg && reviewCount > 0 && (
               <div className="flex items-center space-x-4 py-4">
                 <div className="flex items-center space-x-2 bg-primary/10 dark:bg-primary-dm/20 px-4 py-2 rounded-full">
                   <svg className="w-6 h-6 text-primary dark:text-primary-dm fill-current" viewBox="0 0 20 20">

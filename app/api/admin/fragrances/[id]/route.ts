@@ -67,6 +67,7 @@ export async function PUT(
 
     // Add notes if provided (legacy support for existing note IDs)
     if (notes && notes.length > 0) {
+      // Use createMany with skipDuplicates to avoid constraint errors
       await prisma.fragranceNote.createMany({
         data: notes.map((note: { noteId: string; category: string; intensity?: number }) => ({
           fragranceId: id,
@@ -74,6 +75,7 @@ export async function PUT(
           category: note.category,
           intensity: note.intensity || null,
         })),
+        skipDuplicates: true, // Skip if the combination already exists
       });
     }
 
@@ -81,7 +83,7 @@ export async function PUT(
   } catch (error) {
     console.error("Error updating fragrance:", error);
     return NextResponse.json(
-      { error: "Failed to update fragrance" },
+      { error: error instanceof Error ? error.message : "Failed to update fragrance" },
       { status: 500 }
     );
   }
