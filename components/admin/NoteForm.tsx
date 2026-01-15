@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
@@ -16,14 +16,55 @@ interface NoteFormProps {
 
 export function NoteForm({ initialData }: NoteFormProps) {
   const router = useRouter()
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const [formData, setFormData] = useState({
     name: initialData?.name || '',
-    category: initialData?.category || 'top',
     description: initialData?.description || '',
     imageUrl: initialData?.imageUrl || ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isUploading, setIsUploading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    if (!file.type.startsWith('image/')) {
+      setError('Please select an image file')
+      return
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      setError('Image must be less than 5MB')
+      return
+    }
+
+    setIsUploading(true)
+    setError(null)
+
+    try {
+      const formDataUpload = new FormData()
+      formDataUpload.append('file', file)
+
+      const response = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formDataUpload,
+      })
+
+      if (!response.ok) {
+        const data = await response.json()
+        throw new Error(data.error || 'Failed to upload image')
+      }
+
+      const { url } = await response.json()
+      setFormData({ ...formData, imageUrl: url })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to upload image')
+    } finally {
+      setIsUploading(false)
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -44,7 +85,7 @@ export function NoteForm({ initialData }: NoteFormProps) {
         },
         body: JSON.stringify({
           name: formData.name.trim(),
-          category: formData.category,
+          category: 'top', // Default category since we're removing the UI for it
           description: formData.description.trim() || null,
           imageUrl: formData.imageUrl.trim() || null,
         }),
@@ -92,19 +133,6 @@ export function NoteForm({ initialData }: NoteFormProps) {
     }
   }
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'top':
-        return 'bg-accent-mint/20 dark:bg-accent-mint/30 border-accent-mint/30';
-      case 'heart':
-        return 'bg-accent-lavender/20 dark:bg-accent-lavender/30 border-accent-lavender/30';
-      case 'base':
-        return 'bg-accent-rose/20 dark:bg-accent-rose/30 border-accent-rose/30';
-      default:
-        return 'bg-gray-100 dark:bg-tonal-30 border-gray-200';
-    }
-  }
-
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
       {error && (
@@ -129,28 +157,6 @@ export function NoteForm({ initialData }: NoteFormProps) {
       </div>
 
       <div>
-        <label htmlFor="category" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Category *
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          {['top', 'heart', 'base'].map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setFormData({ ...formData, category: cat })}
-              className={`px-4 py-3 rounded-lg border-2 font-medium transition-all ${
-                formData.category === cat
-                  ? `${getCategoryColor(cat)} border-current`
-                  : 'bg-white dark:bg-tonal-30 border-gray-300 dark:border-tonal-40 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-tonal-50'
-              }`}
-            >
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div>
         <label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Description
         </label>
@@ -165,38 +171,71 @@ export function NoteForm({ initialData }: NoteFormProps) {
       </div>
 
       <div>
-        <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Image URL
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Image
         </label>
-        <input
-          type="url"
-          id="imageUrl"
-          value={formData.imageUrl}
-          onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
-          placeholder="https://example.com/note-image.jpg"
-        />
-        {formData.imageUrl && (
-          <div className="mt-4 relative aspect-square max-w-xs bg-gray-100 dark:bg-tonal-30 rounded-lg overflow-hidden">
-            <Image
-              src={formData.imageUrl}
-              alt="Note preview"
-              fill
-              className="object-cover"
-              onError={() => setFormData({ ...formData, imageUrl: '' })}
+
+        <div className="space-y-4">
+          <div className="flex gap-4">
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={isUploading}
+              className="px-4 py-2 bg-gray-100 dark:bg-tonal-30 border border-gray-300 dark:border-tonal-40 rounded-lg hover:bg-gray-200 dark:hover:bg-tonal-40 transition-colors text-gray-700 dark:text-gray-300 font-medium disabled:opacity-50"
+            >
+              {isUploading ? 'Uploading...' : 'Upload Image'}
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleImageUpload}
+              className="hidden"
             />
+            <span className="text-sm text-gray-500 dark:text-gray-400 self-center">
+              or enter URL below
+            </span>
           </div>
-        )}
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          Tip: Upload your image to a service like Imgur or use a direct image URL
-        </p>
+
+          <input
+            type="url"
+            id="imageUrl"
+            value={formData.imageUrl}
+            onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+            className="w-full px-4 py-2 border border-gray-300 dark:border-tonal-40 rounded-lg focus:ring-2 focus:ring-primary dark:focus:ring-primary-dm focus:border-transparent bg-white dark:bg-tonal-30 text-gray-900 dark:text-gray-100"
+            placeholder="https://example.com/note-image.jpg"
+          />
+
+          {formData.imageUrl && (
+            <div className="relative inline-block">
+              <div className="relative h-16 w-16 bg-gray-100 dark:bg-tonal-30 rounded-lg overflow-hidden">
+                <Image
+                  src={formData.imageUrl}
+                  alt="Note preview"
+                  fill
+                  className="object-contain p-2"
+                  onError={() => setFormData({ ...formData, imageUrl: '' })}
+                />
+              </div>
+              <button
+                type="button"
+                onClick={() => setFormData({ ...formData, imageUrl: '' })}
+                className="absolute -top-2 -right-2 p-1 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="flex gap-4 pt-4">
         <button
           type="submit"
-          disabled={isSubmitting || !formData.name.trim()}
-          className="flex-1 px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting || isUploading || !formData.name.trim()}
+          className="flex-1 px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Saving...' : initialData?.id ? 'Update Note' : 'Create Note'}
         </button>
@@ -205,7 +244,7 @@ export function NoteForm({ initialData }: NoteFormProps) {
           <button
             type="button"
             onClick={handleDelete}
-            disabled={isSubmitting}
+            disabled={isSubmitting || isUploading}
             className="px-6 py-3 bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800 text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Delete

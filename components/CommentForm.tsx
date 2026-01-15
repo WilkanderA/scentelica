@@ -9,7 +9,8 @@ interface CommentFormProps {
 
 export function CommentForm({ fragranceId }: CommentFormProps) {
   const [content, setContent] = useState('')
-  const [rating, setRating] = useState<number>(5)
+  const [rating, setRating] = useState<number>(0)
+  const [hoverRating, setHoverRating] = useState<number>(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
@@ -19,6 +20,11 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
 
     if (!content.trim()) {
       setError('Please write a review')
+      return
+    }
+
+    if (rating === 0) {
+      setError('Please select a rating')
       return
     }
 
@@ -45,7 +51,7 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
 
       // Reset form
       setContent('')
-      setRating(5)
+      setRating(0)
 
       // Refresh the page to show the new comment
       router.refresh()
@@ -70,17 +76,21 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
         <label htmlFor="rating" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Rating
         </label>
-        <div className="flex items-center gap-2">
+        <div
+          className="flex items-center gap-2"
+          onMouseLeave={() => setHoverRating(0)}
+        >
           {[1, 2, 3, 4, 5].map((value) => (
             <button
               key={value}
               type="button"
               onClick={() => setRating(value)}
+              onMouseEnter={() => setHoverRating(value)}
               className="focus:outline-none transition-transform hover:scale-110"
             >
               <svg
                 className={`w-8 h-8 ${
-                  value <= rating
+                  value <= (hoverRating || rating)
                     ? 'text-primary dark:text-primary-dm fill-current'
                     : 'text-gray-300 dark:text-gray-600 fill-current'
                 }`}
@@ -90,7 +100,9 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
               </svg>
             </button>
           ))}
-          <span className="ml-2 text-sm text-gray-600 dark:text-gray-300 font-medium">{rating}/5</span>
+          <span className="ml-2 text-sm text-gray-600 dark:text-gray-300 font-medium">
+            {hoverRating || rating || 0}/5
+          </span>
         </div>
       </div>
 
@@ -111,8 +123,8 @@ export function CommentForm({ fragranceId }: CommentFormProps) {
 
       <button
         type="submit"
-        disabled={isSubmitting || !content.trim()}
-        className="w-full sm:w-auto px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={isSubmitting || !content.trim() || rating === 0}
+        className="w-full sm:w-auto px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Submitting...' : 'Submit Review'}
       </button>

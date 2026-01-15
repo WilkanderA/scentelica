@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { prisma } from '@/lib/db'
 import { SignOutButton } from '@/components/auth/SignOutButton'
+import { ProfilePictureUpload } from '@/components/ProfilePictureUpload'
 import Link from 'next/link'
 
 export default async function ProfilePage() {
@@ -63,17 +64,11 @@ export default async function ProfilePage() {
         <div className="bg-white dark:bg-tonal-20 rounded-xl border border-gray-200 dark:border-tonal-30 p-8 mb-8">
           <div className="flex items-center justify-between flex-wrap gap-6">
             <div className="flex items-center gap-6">
-              {user.user_metadata.avatar_url ? (
-                <img
-                  src={user.user_metadata.avatar_url}
-                  alt={user.user_metadata.name || user.email || 'User'}
-                  className="w-24 h-24 rounded-full"
-                />
-              ) : (
-                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold">
-                  {(user.user_metadata.name || user.email || 'U')[0].toUpperCase()}
-                </div>
-              )}
+              <ProfilePictureUpload
+                currentAvatarUrl={dbUser?.avatarUrl || user.user_metadata.avatar_url}
+                userName={user.user_metadata.name}
+                userEmail={user.email}
+              />
               <div className="flex-1">
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                   {user.user_metadata.name || 'User'}

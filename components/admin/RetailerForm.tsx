@@ -159,7 +159,7 @@ export function RetailerForm({ initialData }: RetailerFormProps) {
         <button
           type="submit"
           disabled={isSubmitting || !formData.name.trim() || !formData.websiteUrl.trim()}
-          className="flex-1 px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Saving...' : initialData?.id ? 'Update Retailer' : 'Create Retailer'}
         </button>

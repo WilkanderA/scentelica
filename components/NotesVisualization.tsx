@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Note {
   id: string;
   name: string;
   category: string;
   intensity?: number;
+  imageUrl?: string;
 }
 
 interface NotesVisualizationProps {
@@ -15,6 +17,25 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
   const topNotes = notes.filter((n) => n.category === "top");
   const heartNotes = notes.filter((n) => n.category === "heart");
   const baseNotes = notes.filter((n) => n.category === "base");
+
+  const NoteChip = ({ note, colorClass }: { note: Note; colorClass: string }) => (
+    <Link
+      href={`/notes/${note.id}`}
+      className={`flex flex-col items-center gap-2 px-4 py-3 ${colorClass} text-gray-800 dark:text-gray-200 rounded-xl text-sm font-medium hover:opacity-80 transition-all cursor-pointer min-w-20`}
+    >
+      {note.imageUrl && (
+        <div className="relative w-10 h-10 shrink-0">
+          <Image
+            src={note.imageUrl}
+            alt={note.name}
+            fill
+            className="object-contain"
+          />
+        </div>
+      )}
+      <span className="text-center">{note.name}</span>
+    </Link>
+  );
 
   return (
     <div className="space-y-8">
@@ -35,13 +56,11 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {topNotes.map((note) => (
-                  <Link
+                  <NoteChip
                     key={note.id}
-                    href={`/notes/${note.id}`}
-                    className="px-4 py-2 bg-accent-mint/30 dark:bg-accent-mint/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-mint/50 dark:hover:bg-accent-mint/60 transition-all cursor-pointer"
-                  >
-                    {note.name}
-                  </Link>
+                    note={note}
+                    colorClass="bg-accent-mint/30 dark:bg-accent-mint/40 hover:bg-accent-mint/50 dark:hover:bg-accent-mint/60"
+                  />
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
@@ -61,13 +80,11 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {heartNotes.map((note) => (
-                  <Link
+                  <NoteChip
                     key={note.id}
-                    href={`/notes/${note.id}`}
-                    className="px-4 py-2 bg-accent-lavender/30 dark:bg-accent-lavender/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-lavender/50 dark:hover:bg-accent-lavender/60 transition-all cursor-pointer"
-                  >
-                    {note.name}
-                  </Link>
+                    note={note}
+                    colorClass="bg-accent-lavender/30 dark:bg-accent-lavender/40 hover:bg-accent-lavender/50 dark:hover:bg-accent-lavender/60"
+                  />
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
@@ -87,13 +104,11 @@ export default function NotesVisualization({ notes }: NotesVisualizationProps) {
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {baseNotes.map((note) => (
-                  <Link
+                  <NoteChip
                     key={note.id}
-                    href={`/notes/${note.id}`}
-                    className="px-4 py-2 bg-accent-rose/30 dark:bg-accent-rose/40 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:bg-accent-rose/50 dark:hover:bg-accent-rose/60 transition-all cursor-pointer"
-                  >
-                    {note.name}
-                  </Link>
+                    note={note}
+                    colorClass="bg-accent-rose/30 dark:bg-accent-rose/40 hover:bg-accent-rose/50 dark:hover:bg-accent-rose/60"
+                  />
                 ))}
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">

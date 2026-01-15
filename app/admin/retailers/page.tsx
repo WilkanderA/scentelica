@@ -27,7 +27,7 @@ export default async function AdminRetailersPage() {
           </div>
           <Link
             href="/admin/retailers/new"
-            className="px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium"
+            className="px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium"
           >
             Add New Retailer
           </Link>
@@ -79,7 +79,7 @@ export default async function AdminRetailersPage() {
             </p>
             <Link
               href="/admin/retailers/new"
-              className="inline-block px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium"
+              className="inline-block px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium"
             >
               Add New Retailer
             </Link>

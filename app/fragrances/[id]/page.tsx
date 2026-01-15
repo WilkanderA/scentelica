@@ -123,11 +123,12 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
     notFound();
   }
 
-  const notes = fragrance.notes.map((fn: { noteId: string; note: { name: string }; category: string; intensity: number | null }) => ({
+  const notes = fragrance.notes.map((fn: { noteId: string; note: { name: string; imageUrl: string | null }; category: string; intensity: number | null }) => ({
     id: fn.noteId,
     name: fn.note.name,
     category: fn.category,
     intensity: fn.intensity || undefined,
+    imageUrl: fn.note.imageUrl || undefined,
   }));
 
   // Generate JSON-LD structured data

@@ -175,7 +175,7 @@ export function ProductLinksManager({ fragranceId, existingLinks }: ProductLinks
           <button
             type="submit"
             disabled={isSubmitting || !newUrl.trim()}
-            className="w-full px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Adding...' : 'Add Product Link'}
           </button>

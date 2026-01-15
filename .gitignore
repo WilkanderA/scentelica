@@ -51,7 +51,6 @@ prisma/dev.db-journal
 prisma/*.db
 prisma/*.db-journal
 prisma/schema.prisma
-migrations/
 prisma/migrations/
 # IDE
 .vscode/*
@@ -103,3 +102,6 @@ test-pool.ts
 scentelica/.env.vercel.check
 
 scripts
+
+# Uploaded files
+public/uploads/

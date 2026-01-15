@@ -22,7 +22,7 @@ export default async function ManageFragrancesPage() {
         </div>
         <Link
           href="/admin/fragrances/new"
-          className="px-6 py-3 bg-primary dark:bg-primary-dm text-white rounded-lg hover:opacity-90 transition-colors font-medium"
+          className="px-6 py-3 bg-primary dark:bg-primary-dm text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-colors font-medium"
         >
           Add New Fragrance
         </Link>
