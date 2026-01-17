@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import FragranceCard from "@/components/FragranceCard";
 import FilterSidebar from "@/components/FilterSidebar";
+import { FragrancesPageClient } from "./FragrancesPageClient";
 import { prisma } from "@/lib/db";
 
 export const dynamic = 'force-dynamic';
@@ -21,11 +21,13 @@ interface FragrancesPageProps {
     brand?: string;
     gender?: string;
     sort?: string;
+    limit?: string;
   }>;
 }
 
 async function FragrancesList({ searchParams }: { searchParams: Awaited<FragrancesPageProps['searchParams']> }) {
-  const { search, brand, gender, sort } = searchParams;
+  const { search, brand, gender, sort, limit } = searchParams;
+  const limitNum = limit ? parseInt(limit) : 50;
 
   const where: any = {};
 
@@ -45,20 +47,31 @@ async function FragrancesList({ searchParams }: { searchParams: Awaited<Fragranc
     where.gender = gender;
   }
 
-  let orderBy: any = { ratingAvg: 'desc' };
+  let orderBy: any = [
+    { ratingAvg: { sort: 'desc', nulls: 'last' } },
+    { reviewCount: 'desc' },
+  ];
 
   if (sort === 'name') {
     orderBy = { name: 'asc' };
   } else if (sort === 'year') {
-    orderBy = { year: 'desc' };
+    orderBy = [
+      { year: { sort: 'desc', nulls: 'last' } },
+      { name: 'asc' },
+    ];
   }
 
+  // Get total count for display
+  const totalCount = await prisma.fragrance.count({ where });
+
+  // Fetch limited fragrances
   const fragrances = await prisma.fragrance.findMany({
     where,
     include: {
       brand: true,
     },
     orderBy,
+    take: limitNum,
   });
 
   const brands = await prisma.brand.findMany({
@@ -73,38 +86,11 @@ async function FragrancesList({ searchParams }: { searchParams: Awaited<Fragranc
         </aside>
 
         <main className="lg:col-span-3">
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              {search ? `Search results for "${search}"` : 'All Fragrances'}
-            </h1>
-            <p className="text-gray-600 dark:text-gray-300">
-              {fragrances.length} {fragrances.length === 1 ? 'fragrance' : 'fragrances'} found
-            </p>
-          </div>
-
-          {fragrances.length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-gray-500 dark:text-gray-400 text-lg">
-                No fragrances found. Try adjusting your filters.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {fragrances.map((fragrance: { id: string; name: string; brand: { name: string }; gender: string | null; concentration: string | null; ratingAvg: number | null; reviewCount: number; bottleImageUrl: string | null }) => (
-                <FragranceCard
-                  key={fragrance.id}
-                  id={fragrance.id}
-                  name={fragrance.name}
-                  brand={fragrance.brand.name}
-                  gender={fragrance.gender || undefined}
-                  concentration={fragrance.concentration || undefined}
-                  ratingAvg={fragrance.ratingAvg !== null && fragrance.ratingAvg > 0 ? fragrance.ratingAvg : undefined}
-                  reviewCount={fragrance.reviewCount}
-                  bottleImageUrl={fragrance.bottleImageUrl || undefined}
-                />
-              ))}
-            </div>
-          )}
+          <FragrancesPageClient
+            initialFragrances={fragrances}
+            totalCount={totalCount}
+            search={search}
+          />
         </main>
       </div>
     </div>

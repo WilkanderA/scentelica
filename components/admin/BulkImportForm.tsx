@@ -1,7 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+
+interface PerfumeDBEntry {
+  brand: string
+  perfume: string
+  image?: string
+  launch_year?: string
+  main_accords?: string
+  notes?: string
+  longevity?: string
+  sillage?: string
+}
 
 const EXAMPLE_JSON = `[
   {
@@ -43,6 +54,79 @@ export function BulkImportForm() {
     failed: number
     errors: string[]
   } | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  // Convert perfume database format to our import format
+  const convertPerfumeDBFormat = (data: PerfumeDBEntry[]) => {
+    return data.map((entry) => {
+      let notesObj: { top?: string[]; heart?: string[]; base?: string[] } = {}
+
+      if (entry.notes) {
+        try {
+          const parsedNotes = JSON.parse(entry.notes)
+
+          if (Array.isArray(parsedNotes)) {
+            // Flat array - put all in top notes
+            notesObj = { top: parsedNotes }
+          } else if (typeof parsedNotes === 'object') {
+            // Object with categories
+            notesObj = {
+              top: parsedNotes.top || [],
+              heart: parsedNotes.middle || parsedNotes.heart || [],
+              base: parsedNotes.base || [],
+            }
+          }
+        } catch {
+          // If parsing fails, skip notes
+        }
+      }
+
+      return {
+        name: entry.perfume,
+        brand: entry.brand,
+        year: entry.launch_year ? parseInt(entry.launch_year) : undefined,
+        bottleImageUrl: entry.image || undefined,
+        notes: notesObj,
+      }
+    })
+  }
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setError(null)
+    setResult(null)
+
+    const reader = new FileReader()
+    reader.onload = (event) => {
+      try {
+        const content = event.target?.result as string
+        const data = JSON.parse(content)
+
+        if (!Array.isArray(data)) {
+          throw new Error('JSON must be an array')
+        }
+
+        // Check if it's perfume database format (has "perfume" field)
+        if (data.length > 0 && data[0].perfume) {
+          const converted = convertPerfumeDBFormat(data)
+          setJsonData(JSON.stringify(converted, null, 2))
+        } else {
+          // Already in correct format
+          setJsonData(JSON.stringify(data, null, 2))
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to parse file')
+      }
+    }
+    reader.readAsText(file)
+
+    // Reset file input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -115,13 +199,28 @@ export function BulkImportForm() {
             <li><strong>Notes:</strong> Object with top, heart, and base arrays (note names will be auto-created)</li>
           </ul>
         </div>
-        <button
-          type="button"
-          onClick={loadExample}
-          className="mt-4 px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:opacity-90 transition-colors text-sm font-medium"
-        >
-          Load Example
-        </button>
+        <div className="mt-4 flex gap-3">
+          <button
+            type="button"
+            onClick={loadExample}
+            className="px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:opacity-90 transition-colors text-sm font-medium"
+          >
+            Load Example
+          </button>
+          <label className="px-4 py-2 bg-green-600 dark:bg-green-700 text-white rounded-lg hover:opacity-90 transition-colors text-sm font-medium cursor-pointer">
+            Upload JSON File
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".json"
+              onChange={handleFileUpload}
+              className="hidden"
+            />
+          </label>
+        </div>
+        <p className="mt-3 text-xs text-blue-700 dark:text-blue-300">
+          Supports both standard format and perfume database format (auto-converts)
+        </p>
       </div>
 
       {/* Error Display */}

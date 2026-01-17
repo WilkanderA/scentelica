@@ -30,29 +30,27 @@ export function NotesPageClient({ notes }: NotesPageClientProps) {
   const NoteCard = ({ note }: { note: Note }) => (
     <Link
       href={`/notes/${note.id}`}
-      className="bg-white dark:bg-tonal-20 border-2 border-gray-200 dark:border-tonal-40 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary-dm hover:shadow-lg transition-all group block cursor-pointer"
+      className="bg-white dark:bg-tonal-20 border border-gray-200 dark:border-tonal-40 rounded-xl p-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
     >
-      {note.imageUrl && (
-        <div className="relative w-full h-16 bg-gray-100 dark:bg-tonal-30 flex items-center justify-center">
+      <div className="relative w-12 h-12 mb-3">
+        {note.imageUrl ? (
           <Image
             src={note.imageUrl}
             alt={note.name}
             fill
-            className="object-contain p-2"
+            className="object-contain rounded-lg"
           />
-        </div>
-      )}
-      <div className="p-6">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-dm transition-colors mb-2">
-          {note.name}
-        </h3>
-        {note.description && (
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">{note.description}</p>
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-tonal-30 rounded-lg">
+            <svg className="w-8 h-8 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
         )}
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          Used in {note._count.fragrances} {note._count.fragrances === 1 ? 'fragrance' : 'fragrances'}
-        </p>
       </div>
+      <span className="text-sm font-medium text-gray-900 dark:text-white">
+        {note.name}
+      </span>
     </Link>
   );
 
@@ -94,7 +92,7 @@ export function NotesPageClient({ notes }: NotesPageClientProps) {
         </div>
 
         {filteredNotes.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {filteredNotes.map((note) => (
               <NoteCard key={note.id} note={note} />
             ))}
